@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:partir-vivre-en-thailande.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:gemini-design-mcp.com)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "mcp__gemini-design-mcp__create_frontend",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:unsplash.com)",
+      "mcp__gemini-design-mcp__modify_frontend",
+      "Bash(npx next build:*)",
+      "Bash(npm run dev:*)"
+    ]
+  }
+}

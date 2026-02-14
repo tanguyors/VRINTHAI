@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gemini-design-mcp": {
+      "command": "npx",
+      "args": ["gemini-design-mcp@latest"],
+      "env": {
+        "API_KEY": "gd_YdgobE0HVCTMdUJ8RMdduJI7C3_jAjas"
+      }
+    }
+  }
+}
