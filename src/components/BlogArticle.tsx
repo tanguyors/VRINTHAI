@@ -24,8 +24,32 @@ export default function BlogArticle({
   article: Article;
   relatedArticles: Article[];
 }) {
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: article.image,
+    datePublished: article.date,
+    author: {
+      "@type": "Organization",
+      name: "Partir Vivre en Thaïlande",
+      url: "https://vrinthai.vercel.app",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Partir Vivre en Thaïlande",
+      url: "https://vrinthai.vercel.app",
+    },
+    mainEntityOfPage: `https://vrinthai.vercel.app/blog/${article.slug}`,
+  };
+
   return (
     <div className="min-h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-medium">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       {/* Navigation Overlay */}
       <div className="fixed top-20 left-4 md:top-24 md:left-6 z-40">
         <Link
@@ -213,13 +237,6 @@ export default function BlogArticle({
         </section>
       )}
 
-      <style jsx global>{`
-        @keyframes gradient {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
     </div>
   );
 }

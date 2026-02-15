@@ -40,6 +40,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+const contactEmail = ["contact", "partir-vivre-en-thailande.com"].join("@");
+
 const SectionTitle = ({
   children,
   subtitle,
@@ -1196,9 +1198,9 @@ export default function HomePage() {
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Téléphone</p>
                   <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">+66 61 420 2619</p>
                 </a>
-                <a href="mailto:contact@partir-vivre-en-thailande.com" className="group">
+                <a href={`mailto:${contactEmail}`} className="group">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Email</p>
-                  <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">contact@partir-vivre-en-thailande.com</p>
+                  <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">{contactEmail}</p>
                 </a>
               </div>
             </div>
@@ -1263,19 +1265,6 @@ export default function HomePage() {
         </div>
       </footer>
 
-      <style jsx global>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-      `}</style>
 
       {/* Floating Back to Top */}
       <AnimatePresence>

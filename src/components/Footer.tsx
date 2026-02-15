@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+const email = ["contact", "partir-vivre-en-thailande.com"].join("@");
+
 const navLinks = [
   { name: "Accueil", href: "/" },
   { name: "Nos services", href: "/#services" },
@@ -81,9 +83,9 @@ export default function Footer() {
                 <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Téléphone</p>
                 <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">+66 61 420 2619</p>
               </a>
-              <a href="mailto:contact@partir-vivre-en-thailande.com" className="group">
+              <a href={`mailto:${email}`} className="group">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Email</p>
-                <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">contact@partir-vivre-en-thailande.com</p>
+                <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">{email}</p>
               </a>
             </div>
           </div>

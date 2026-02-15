@@ -18,6 +18,8 @@ import {
   Smartphone,
 } from "lucide-react";
 
+const contactEmail = ["contact", "vivre-en-thailande.com"].join("@");
+
 const sujetOptions = [
   "Visa & Immigration",
   "Assurance santé",
@@ -188,7 +190,7 @@ export default function ContactPage() {
               Email
             </h3>
             <p className="text-white font-bold text-xl mb-4">
-              contact@vivre-en-thailande.com
+              {contactEmail}
             </p>
             <span className="text-white/40 text-xs font-bold uppercase tracking-wider mt-auto flex items-center gap-2">
               <Clock className="w-3 h-3" /> Réponse sous 24h
@@ -412,33 +414,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <style jsx global>{`
-        @keyframes gradient {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus,
-        textarea:-webkit-autofill,
-        textarea:-webkit-autofill:hover,
-        textarea:-webkit-autofill:focus,
-        select:-webkit-autofill,
-        select:-webkit-autofill:hover,
-        select:-webkit-autofill:focus {
-          -webkit-text-fill-color: white;
-          -webkit-box-shadow: 0 0 0px 1000px #0d3b40 inset;
-          transition: background-color 5000s ease-in-out 0s;
-        }
-      `}</style>
     </main>
   );
 }

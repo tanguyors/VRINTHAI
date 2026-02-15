@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     "whatsapp thailande",
     "assistance visa thailande",
   ],
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
+    title: "Contactez-nous | Partir Vivre en Thaïlande",
+    description:
+      "Notre équipe locale vous accompagne dans toutes vos démarches d'expatriation en Thaïlande. Réponse garantie sous 24h.",
+  },
+  twitter: {
+    card: "summary_large_image",
     title: "Contactez-nous | Partir Vivre en Thaïlande",
     description:
       "Notre équipe locale vous accompagne dans toutes vos démarches d'expatriation en Thaïlande. Réponse garantie sous 24h.",

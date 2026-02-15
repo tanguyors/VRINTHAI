@@ -20,19 +20,6 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans">
       <main>
-        <style jsx global>{`
-          @keyframes gradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        `}</style>
 
         {/* ═══════════════ HERO (COMPACT) ═══════════════ */}
         <section className="relative w-full pt-24 md:pt-32 pb-16 overflow-hidden">

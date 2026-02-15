@@ -363,19 +363,6 @@ export default function AssuranceSantePage() {
       className="h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans overflow-x-hidden overflow-y-auto"
     >
       <main className="bg-[#022c31] selection:bg-[#ff8c42] selection:text-white">
-        <style jsx global>{`
-          @keyframes gradient {
-            0% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-            100% {
-              background-position: 0% 50%;
-            }
-          }
-        `}</style>
 
         {/* ═══════════════ SECTION 1 — HERO ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
