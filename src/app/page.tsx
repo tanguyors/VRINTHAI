@@ -456,6 +456,16 @@ function VisaAccordionSection() {
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  // Show/hide back to top button
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const onScroll = () => setShowBackToTop(container.scrollTop > window.innerHeight);
+    container.addEventListener("scroll", onScroll, { passive: true });
+    return () => container.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -1266,6 +1276,36 @@ export default function HomePage() {
           }
         }
       `}</style>
+
+      {/* Floating Back to Top */}
+      <AnimatePresence>
+        {showBackToTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+            onClick={() => {
+              const container = containerRef.current;
+              if (!container) return;
+              const startTop = container.scrollTop;
+              const duration = 800;
+              const startTime = performance.now();
+              function easeOutCubic(t: number) { return 1 - Math.pow(1 - t, 3); }
+              function step(time: number) {
+                if (!container) return;
+                const progress = Math.min((time - startTime) / duration, 1);
+                container.scrollTop = startTop * (1 - easeOutCubic(progress));
+                if (progress < 1) requestAnimationFrame(step);
+              }
+              requestAnimationFrame(step);
+            }}
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-[#ff8c42] hover:bg-[#ff7a21] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(255,140,66,0.4)] hover:shadow-[0_15px_40px_rgba(255,140,66,0.5)] hover:-translate-y-1 transition-all cursor-pointer"
+          >
+            <ChevronDown className="w-5 h-5 rotate-180" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

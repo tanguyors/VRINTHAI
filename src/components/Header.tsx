@@ -28,8 +28,8 @@ const navLinks = [
     name: "Nos services",
     href: "#",
     dropdown: [
-      { name: "Visa Thaïlande", href: "/visa", icon: FileText },
-      { name: "Assurance santé expat", href: "/assurance", icon: HeartPulse },
+      { name: "Visa Thaïlande", href: "/visa-thailande", icon: FileText },
+      { name: "Assurance santé expat", href: "/assurance-sante", icon: HeartPulse },
       { name: "Coût de la vie", href: "/cout-vie", icon: Banknote },
       { name: "Où vivre en Thaïlande", href: "/ou-vivre", icon: MapPin },
       { name: "Entreprendre", href: "/entreprendre", icon: Briefcase },
@@ -140,10 +140,10 @@ export default function Header() {
                 <Phone className="w-3 h-3 text-[#ffc857]" /> +66 61 420 2619
               </span>
             </div>
-            <button className="group relative px-6 py-3 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-sm rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(255,140,66,0.3)] flex items-center gap-2 overflow-hidden">
+            <a href="https://wa.me/66614202619" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-sm rounded-xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_10px_30px_rgba(255,140,66,0.3)] flex items-center gap-2 overflow-hidden">
               <MessageCircle className="w-5 h-5" />
               <span className="relative z-10 uppercase tracking-tight">Contactez-nous</span>
-            </button>
+            </a>
           </div>
 
           <button

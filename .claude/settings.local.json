@@ -11,7 +11,10 @@
       "WebFetch(domain:unsplash.com)",
       "mcp__gemini-design-mcp__modify_frontend",
       "Bash(npx next build:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm run build:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }
