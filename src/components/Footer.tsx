@@ -30,7 +30,7 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#022c31] pt-32 pb-16 relative overflow-hidden">
+    <footer className="bg-[#022c31] pt-16 md:pt-32 pb-16 relative overflow-hidden">
       {/* Animated Gradient Separator */}
       <div className="absolute top-0 left-0 w-full h-px bg-white/10 overflow-hidden">
         <motion.div
@@ -42,9 +42,9 @@ export default function Footer() {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Brand Header Section */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-24">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-12 md:mb-24">
           <div className="max-w-3xl">
-            <h2 className="text-5xl md:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
               Partir Vivre <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                 en Thaïlande
@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12 md:mb-24">
           <div className="col-span-2 lg:col-span-2 pr-8">
             <div className="flex flex-col gap-4">
               <a href="tel:+66614202619" className="group">
@@ -134,7 +134,7 @@ export default function Footer() {
           <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium">
             © 2025 Partir Vivre en Thaïlande – Tous droits réservés
           </p>
-          <div className="flex gap-8">
+          <div className="flex gap-4 md:gap-8">
             {["CGU", "Mentions légales", "Politique de confidentialité"].map((legal) => (
               <a key={legal} href="#" className="text-white/30 hover:text-white text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
                 {legal}

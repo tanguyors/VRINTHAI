@@ -183,7 +183,7 @@ export default function Header() {
                   <Link
                     href={link.href}
                     onClick={() => !link.dropdown && setIsMobileMenuOpen(false)}
-                    className="text-3xl font-black text-white italic tracking-tighter block hover:text-[#ffc857] transition-colors"
+                    className="text-2xl font-black text-white italic tracking-tighter block hover:text-[#ffc857] transition-colors"
                   >
                     {link.name}
                   </Link>

@@ -27,7 +27,7 @@ export default function BlogArticle({
   return (
     <div className="min-h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-medium">
       {/* Navigation Overlay */}
-      <div className="fixed top-24 left-6 z-40">
+      <div className="fixed top-20 left-4 md:top-24 md:left-6 z-40">
         <Link
           href="/blog"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all group"
@@ -38,7 +38,7 @@ export default function BlogArticle({
       </div>
 
       {/* Hero Section */}
-      <section className="relative w-full h-[85vh] flex items-end overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-[85vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={article.image}
@@ -72,7 +72,7 @@ export default function BlogArticle({
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic"
+              className="text-2xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic"
             >
               {article.title}
             </motion.h1>
@@ -97,7 +97,7 @@ export default function BlogArticle({
       </section>
 
       {/* Article Content */}
-      <section className="relative w-full py-24 overflow-hidden">
+      <section className="relative w-full py-12 md:py-24 overflow-hidden">
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[160px] opacity-[0.07] pointer-events-none" />
         <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#ffc857] rounded-full blur-[160px] opacity-[0.05] pointer-events-none" />
 
@@ -107,7 +107,7 @@ export default function BlogArticle({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl text-[#ffc857] font-medium leading-relaxed mb-16 italic border-l-4 border-[#ff8c42] pl-8"
+              className="text-base md:text-xl lg:text-2xl text-[#ffc857] font-medium leading-relaxed mb-16 italic border-l-4 border-[#ff8c42] pl-6 md:pl-8"
             >
               {article.excerpt}
             </motion.p>
@@ -122,7 +122,7 @@ export default function BlogArticle({
                   transition={{ delay: idx * 0.05 }}
                   className="group"
                 >
-                  <h2 className="text-2xl md:text-3xl font-black italic tracking-tighter mb-6 text-white">
+                  <h2 className="text-xl md:text-2xl lg:text-3xl font-black italic tracking-tighter mb-6 text-white">
                     {section.heading}
                   </h2>
                   <div className="space-y-5 text-lg text-white/80 leading-relaxed font-medium">
@@ -139,11 +139,11 @@ export default function BlogArticle({
 
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
-        <section className="w-full py-24 bg-[#0d3b40]/50 border-t border-white/5">
+        <section className="w-full py-12 md:py-24 bg-[#0d3b40]/50 border-t border-white/5">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-6">
               <div>
-                <h2 className="text-4xl md:text-5xl font-black italic tracking-tighter text-white mb-4">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-black italic tracking-tighter text-white mb-4">
                   Poursuivez{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite]">
                     votre voyage
@@ -168,7 +168,7 @@ export default function BlogArticle({
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
                     whileHover={{ y: -8 }}
-                    className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500"
+                    className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500"
                   >
                     <div className="relative aspect-video overflow-hidden">
                       <Image

@@ -35,7 +35,7 @@ export default function BlogPage() {
         `}</style>
 
         {/* ═══════════════ HERO (COMPACT) ═══════════════ */}
-        <section className="relative w-full pt-32 pb-16 overflow-hidden">
+        <section className="relative w-full pt-24 md:pt-32 pb-16 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div
               className="absolute inset-0"
@@ -70,7 +70,7 @@ export default function BlogPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-6 italic"
+                className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-6 italic"
               >
                 Le Blog{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
@@ -117,7 +117,7 @@ export default function BlogPage() {
         </section>
 
         {/* ═══════════════ GRILLE D'ARTICLES ═══════════════ */}
-        <section className="relative z-10 container mx-auto px-6 pb-24">
+        <section className="relative z-10 container mx-auto px-6 pb-12 md:pb-24">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeCategory}
@@ -134,7 +134,7 @@ export default function BlogPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                   whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] cursor-pointer"
+                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] cursor-pointer"
                 >
                   <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
 

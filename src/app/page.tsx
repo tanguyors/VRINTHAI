@@ -52,7 +52,7 @@ const SectionTitle = ({
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="text-4xl md:text-6xl font-black text-white italic tracking-tighter leading-tight"
+      className="text-3xl md:text-4xl lg:text-6xl font-black text-white italic tracking-tighter leading-tight"
     >
       {children}
     </motion.h2>
@@ -106,7 +106,7 @@ function CostOfLivingSection() {
   const maxExpense = breakdown.loyer;
 
   return (
-    <section className="relative py-32 bg-[#022c31] overflow-hidden min-h-screen">
+    <section className="relative py-16 md:py-32 bg-[#022c31] overflow-hidden min-h-0 md:min-h-screen">
       {/* Background Image + Decorative Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -140,7 +140,7 @@ function CostOfLivingSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
+            className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
           >
             Coût de la vie <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande</span>
@@ -157,7 +157,7 @@ function CostOfLivingSection() {
                     <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-[#ff8c42]/20 group-hover:border-[#ff8c42]/30 transition-all duration-300">
                       <row.icon size={22} className="text-[#ff8c42]" />
                     </div>
-                    <span className="text-xl font-bold tracking-tight">{row.item}</span>
+                    <span className="text-base md:text-xl font-bold tracking-tight">{row.item}</span>
                   </div>
                   <motion.span
                     key={row.value}
@@ -187,7 +187,7 @@ function CostOfLivingSection() {
               viewport={{ once: true }}
               className="relative overflow-hidden p-1 rounded-3xl bg-gradient-to-br from-white/20 to-transparent"
             >
-              <div className="relative z-10 p-8 md:p-10 rounded-[22px] bg-[#0d3b40]/80 backdrop-blur-xl border border-white/10 h-full">
+              <div className="relative z-10 p-5 md:p-8 lg:p-10 rounded-[22px] bg-[#0d3b40]/80 backdrop-blur-xl border border-white/10 h-full">
                 <div className="flex items-center gap-2 mb-6 text-[#ffc857] text-[10px] font-bold uppercase tracking-[0.3em]">
                   <Wallet className="w-4 h-4" />
                   <span>Simulateur budget</span>
@@ -216,7 +216,7 @@ function CostOfLivingSection() {
                     key={budget}
                     initial={{ scale: 1.05 }}
                     animate={{ scale: 1 }}
-                    className="text-5xl md:text-6xl font-black italic text-white tracking-tighter leading-none drop-shadow-[0_0_15px_rgba(255,200,87,0.3)]"
+                    className="text-4xl md:text-5xl lg:text-6xl font-black italic text-white tracking-tighter leading-none drop-shadow-[0_0_15px_rgba(255,200,87,0.3)]"
                   >
                     {budget.toLocaleString()} €
                   </motion.div>
@@ -328,7 +328,7 @@ function VisaAccordionSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+    <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
           src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=1920&q=80"
@@ -355,7 +355,7 @@ function VisaAccordionSection() {
           >
             Procédures administratives
           </motion.div>
-          <h2 className="text-5xl md:text-6xl font-black text-white italic tracking-tighter leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white italic tracking-tighter leading-tight">
             Types de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">visas</span>
           </h2>
           <p className="mt-4 text-white/60 font-medium">Trouvez le visa adapté à votre projet d&apos;expatriation en Thaïlande</p>
@@ -620,7 +620,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8 italic"
+              className="text-2xl md:text-5xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8 italic"
             >
               Vivre en Thaïlande:
               <br />
@@ -679,7 +679,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. FEATURES GRID */}
-      <section className="py-32 relative overflow-hidden bg-[#022c31] selection:bg-[#ff8c42] selection:text-white min-h-screen flex flex-col justify-center">
+      <section className="py-16 md:py-32 relative overflow-hidden bg-[#022c31] selection:bg-[#ff8c42] selection:text-white min-h-0 md:min-h-screen flex flex-col justify-center">
         {/* Background Image + Decorative Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
@@ -699,7 +699,7 @@ export default function HomePage() {
         </div>
 
         <div className="container relative z-10 mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-20">
+          <div className="max-w-4xl mx-auto text-center mb-10 md:mb-20">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -714,7 +714,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
+              className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
             >
               Pourquoi vivre <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande en 2025 ?</span>
@@ -739,7 +739,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className="group relative p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] hover:border-[#ff8c42]/40 transition-all duration-500 overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                className="group relative p-5 md:p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2.5rem] hover:border-[#ff8c42]/40 transition-all duration-500 overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
               >
                 {/* Subtle Hover Glow */}
                 <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
@@ -767,7 +767,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. AVANTAGES & PROFILES BENTO GRID */}
-      <section className="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=1920&q=80"
@@ -796,11 +796,11 @@ export default function HomePage() {
               <Compass className="w-3 h-3" />
               <span>Pourquoi choisir la Thaïlande ?</span>
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter leading-[0.9] mb-8">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter leading-[0.9] mb-8">
               Les avantages <br />
               <span className="text-[#ffc857]">de s&apos;installer</span>
             </h2>
-            <p className="text-xl text-white/80 font-medium leading-relaxed">
+            <p className="text-base md:text-xl text-white/80 font-medium leading-relaxed">
               S&apos;installer en Thaïlande en tant qu&apos;expatrié offre des conditions uniques : coût de la vie dérisoire, climat paradisiaque, soins de santé abordables et qualité de vie élevée.
             </p>
           </div>
@@ -812,13 +812,13 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 group relative overflow-hidden rounded-[2.5rem] p-10 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between min-h-[400px]"
+              className="md:col-span-2 group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between min-h-[280px] md:min-h-[400px]"
             >
               <div className="relative z-10">
                 <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-8 border border-white/30">
                   <Palmtree className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-4 leading-none">Retraités</h3>
+                <h3 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter mb-4 leading-none">Retraités</h3>
                 <p className="text-xl md:text-2xl text-white font-bold leading-tight max-w-md opacity-90">
                   Visa retraite, coût de la vie réduit, climat chaud et infrastructures médicales d&apos;élite.
                 </p>
@@ -835,7 +835,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-[2.5rem] p-8 flex flex-col justify-between hover:bg-white/15 transition-all duration-300"
+              className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:bg-white/15 transition-all duration-300"
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-[#ffc857]/30">
@@ -853,7 +853,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
@@ -871,7 +871,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
@@ -889,7 +889,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
             >
               <div>
                 <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
@@ -917,7 +917,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. DÉMARCHES TIMELINE */}
-      <section className="py-24 relative overflow-hidden bg-[#022c31] min-h-screen">
+      <section className="py-12 md:py-24 relative overflow-hidden bg-[#022c31] min-h-0 md:min-h-screen">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1920&q=80"
@@ -935,11 +935,11 @@ export default function HomePage() {
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10 md:mb-20">
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 text-[#ffc857] text-[10px] font-bold tracking-[0.3em] uppercase">
               Le parcours pas à pas
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter leading-none mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter leading-none mb-6">
               Démarches pour <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">s&apos;expatrier</span>
             </h2>
             <p className="text-white/60 max-w-xl mx-auto font-medium">
@@ -980,7 +980,7 @@ export default function HomePage() {
                 >
                   {/* STEP CONTENT CARD */}
                   <div className="ml-24 md:ml-0 md:w-[42%]">
-                    <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
+                    <div className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="p-3 rounded-xl bg-[#ff8c42]/10 text-[#ff8c42]">
                           <step.icon className="w-6 h-6" />
@@ -1021,7 +1021,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. OÙ VIVRE CITY CARDS */}
-      <section className="py-24 min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 min-h-0 md:min-h-screen flex flex-col justify-center">
         <div className="container mx-auto px-6">
           <SectionTitle subtitle="Chaque destination offre un cadre spécifique : urbain, balnéaire, montagnard ou insulaire. À chacun son ambiance !">
             Où vivre en Thaïlande ?
@@ -1038,7 +1038,7 @@ export default function HomePage() {
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                className="group relative h-[350px] rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-end"
+                className="group relative h-[280px] md:h-[350px] rounded-2xl md:rounded-3xl overflow-hidden border border-white/10 flex flex-col justify-end"
               >
                 <Image
                   src={city.img}
@@ -1071,7 +1071,7 @@ export default function HomePage() {
       <VisaAccordionSection />
 
       {/* 8. RESSOURCES UTILES */}
-      <section className="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=1920&q=80"
@@ -1102,7 +1102,7 @@ export default function HomePage() {
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.02 }}
-                className="p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col items-start gap-4 group cursor-pointer"
+                className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 flex flex-col items-start gap-4 group cursor-pointer"
               >
                 <div className="text-[#ffc857]">{res.icon}</div>
                 <h3 className="text-xl font-bold leading-tight flex-1">
@@ -1118,7 +1118,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. FINAL CTA */}
-      <section className="py-24 relative overflow-hidden min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <Image
           src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=80"
           alt="Plage thaïlandaise au coucher du soleil"
@@ -1127,17 +1127,17 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-[#022c31] opacity-80" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center p-12 md:p-20 rounded-[4rem] bg-gradient-to-br from-[#0d3b40] to-[#022c31] border border-white/10 relative overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto text-center p-8 md:p-12 lg:p-20 rounded-3xl md:rounded-[4rem] bg-gradient-to-br from-[#0d3b40] to-[#022c31] border border-white/10 relative overflow-hidden shadow-2xl">
             <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#ff8c42] rounded-full blur-[100px] opacity-20" />
-            <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter mb-8">
+            <h2 className="text-2xl md:text-4xl lg:text-6xl font-black italic tracking-tighter mb-8">
               Vous envisagez de{" "}
               <span className="text-[#ffc857]">vivre en Thaïlande ?</span>
             </h2>
-            <p className="text-xl text-white/70 mb-12 font-medium">
+            <p className="text-base md:text-xl text-white/70 mb-12 font-medium">
               Bénéficiez d&apos;un accompagnement personnalisé et d&apos;un audit
               gratuit de votre situation : retraite, visa, budget, logement, etc.
             </p>
-            <button className="px-12 py-6 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-xl rounded-2xl transition-all shadow-xl hover:scale-105 active:scale-95">
+            <button className="px-8 md:px-12 py-4 md:py-6 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-base md:text-xl rounded-2xl transition-all shadow-xl hover:scale-105 active:scale-95">
               Je veux vivre en Thaïlande dès maintenant
             </button>
           </div>
@@ -1145,7 +1145,7 @@ export default function HomePage() {
       </section>
 
       {/* 10. FOOTER */}
-      <footer className="bg-[#022c31] pt-32 pb-16 relative overflow-hidden">
+      <footer className="bg-[#022c31] pt-16 md:pt-32 pb-16 relative overflow-hidden">
         {/* Animated Gradient Separator */}
         <div className="absolute top-0 left-0 w-full h-px bg-white/10 overflow-hidden">
           <motion.div
@@ -1157,9 +1157,9 @@ export default function HomePage() {
 
         <div className="container mx-auto px-6 relative z-10">
           {/* Brand Header Section */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-24">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-12 md:mb-24">
             <div className="max-w-3xl">
-              <h2 className="text-5xl md:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
                 Partir Vivre <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   en Thaïlande
@@ -1189,7 +1189,7 @@ export default function HomePage() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12 md:mb-24">
             <div className="col-span-2 lg:col-span-2 pr-8">
               <div className="flex flex-col gap-4">
                 <a href="tel:+66614202619" className="group">
@@ -1252,7 +1252,7 @@ export default function HomePage() {
             <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium">
               © 2025 Partir Vivre en Thaïlande – Tous droits réservés
             </p>
-            <div className="flex gap-8">
+            <div className="flex gap-4 md:gap-8">
               {["CGU", "Mentions légales", "Politique de confidentialité"].map((legal) => (
                 <a key={legal} href="#" className="text-white/30 hover:text-white text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
                   {legal}

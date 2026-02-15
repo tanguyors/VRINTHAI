@@ -410,7 +410,7 @@ export default function CoutViePage() {
         `}</style>
 
         {/* ═══════════════ SECTION 1 — HERO ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
@@ -453,7 +453,7 @@ export default function CoutViePage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8 italic"
+                className="text-2xl md:text-4xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-8 italic"
               >
                 Coût de la Vie
                 <br />
@@ -498,7 +498,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 2 — COMPARATIF PAR VILLE ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center overflow-hidden py-24">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
             src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=80"
             alt="Skyline Bangkok"
@@ -512,7 +512,7 @@ export default function CoutViePage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Combien ça coûte{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   par ville ?
@@ -531,7 +531,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="group relative overflow-hidden rounded-[2.5rem] p-8 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between"
+                    className="group relative overflow-hidden rounded-[2.5rem] p-5 md:p-8 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between"
                   >
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-6">
@@ -583,7 +583,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
+                    className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
                   >
                     <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
@@ -630,7 +630,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 3 — POSTES DE DÉPENSE ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center overflow-hidden py-24">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
             src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=80"
             alt="Vie quotidienne Thaïlande"
@@ -644,7 +644,7 @@ export default function CoutViePage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Les postes{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   de dépense
@@ -663,7 +663,7 @@ export default function CoutViePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2rem] p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
                   >
                     <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
@@ -688,7 +688,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 4 — BUDGET PAR PROFIL ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center overflow-hidden py-24">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
             src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1920&q=80"
             alt="Vie en Thaïlande"
@@ -702,7 +702,7 @@ export default function CoutViePage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Quel budget{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   pour votre profil ?
@@ -748,7 +748,7 @@ export default function CoutViePage() {
                         ))}
                       </ul>
                     </div>
-                    <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <div className="absolute top-0 right-0 p-5 md:p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                       <Icon className="w-48 h-48 rotate-12" />
                     </div>
                   </motion.div>
@@ -760,7 +760,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
+                    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
                   >
                     <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
@@ -799,7 +799,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 5 — CONSEILS OPTIMISATION ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center overflow-hidden py-24">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
             src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80"
             alt="Paysage Thaïlande"
@@ -813,7 +813,7 @@ export default function CoutViePage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-20"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Optimiser{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   votre budget
@@ -920,7 +920,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center overflow-hidden py-24">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
             src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
             alt="Thaïlande"
@@ -934,7 +934,7 @@ export default function CoutViePage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Questions{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   fréquentes
@@ -993,7 +993,7 @@ export default function CoutViePage() {
         </section>
 
         {/* ═══════════════ SECTION 7 — CTA CONTACT ═══════════════ */}
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div
               className="absolute inset-0"
@@ -1029,7 +1029,7 @@ export default function CoutViePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl font-black text-white leading-[0.95] tracking-tighter italic mb-8"
+                className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic mb-8"
               >
                 Besoin d&apos;un{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">

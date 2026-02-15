@@ -41,7 +41,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#022c31] selection:bg-[#ff8c42] selection:text-white overflow-x-hidden">
       {/* HERO SECTION */}
-      <section className="relative w-full min-h-[80vh] flex items-center justify-center pt-24 pb-40">
+      <section className="relative w-full min-h-0 md:min-h-[80vh] flex items-center justify-center pt-24 pb-20 md:pb-40">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
             className="absolute inset-0 opacity-80"
@@ -72,7 +72,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic"
+              className="text-3xl md:text-5xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic"
             >
               Parlons de Votre <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
@@ -84,7 +84,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto mb-12 font-medium leading-relaxed"
             >
               Une question sur l&apos;expatriation ? Notre équipe basée en
               Thaïlande vous accompagne dans toutes vos démarches.
@@ -114,7 +114,7 @@ export default function ContactPage() {
       </section>
 
       {/* CONTACT INFO CARDS */}
-      <section className="relative z-20 container mx-auto px-6 -mt-20 mb-32">
+      <section className="relative z-20 container mx-auto px-6 -mt-20 mb-16 md:mb-32">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* WhatsApp Card - Highlighted */}
           <motion.a
@@ -125,7 +125,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
-            className="group relative p-8 rounded-[2rem] bg-gradient-to-br from-[#ff8c42] to-[#ff7a21] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col items-start overflow-hidden"
+            className="group relative p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-gradient-to-br from-[#ff8c42] to-[#ff7a21] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col items-start overflow-hidden"
           >
             <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-colors" />
             <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6">
@@ -134,7 +134,7 @@ export default function ContactPage() {
             <span className="text-white/70 text-sm font-bold uppercase tracking-widest mb-2">
               Le moyen le plus rapide
             </span>
-            <h3 className="text-3xl font-black text-white italic mb-2">
+            <h3 className="text-2xl md:text-3xl font-black text-white italic mb-2">
               WhatsApp
             </h3>
             <p className="text-white font-bold text-xl mb-8">
@@ -151,7 +151,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
+            className="p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
           >
             <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
               <Phone className="w-7 h-7 text-[#ffc857]" />
@@ -159,7 +159,7 @@ export default function ContactPage() {
             <span className="text-white/40 text-sm font-bold uppercase tracking-widest mb-2">
               Appelez-nous directement
             </span>
-            <h3 className="text-3xl font-black text-white italic mb-2">
+            <h3 className="text-2xl md:text-3xl font-black text-white italic mb-2">
               Téléphone
             </h3>
             <p className="text-white font-bold text-xl mb-4">
@@ -176,7 +176,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
+            className="p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
           >
             <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
               <Mail className="w-7 h-7 text-[#ffc857]" />
@@ -184,7 +184,7 @@ export default function ContactPage() {
             <span className="text-white/40 text-sm font-bold uppercase tracking-widest mb-2">
               Demandes détaillées
             </span>
-            <h3 className="text-3xl font-black text-white italic mb-2">
+            <h3 className="text-2xl md:text-3xl font-black text-white italic mb-2">
               Email
             </h3>
             <p className="text-white font-bold text-xl mb-4">
@@ -198,18 +198,18 @@ export default function ContactPage() {
       </section>
 
       {/* FORM SECTION */}
-      <section className="container mx-auto px-6 py-24 relative overflow-hidden">
+      <section className="container mx-auto px-6 py-12 md:py-24 relative overflow-hidden">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-black text-white italic leading-[0.9] tracking-tighter mb-8">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic leading-[0.9] tracking-tighter mb-8">
               Envoyez-nous <br />
               <span className="text-[#ffc857]">un message</span>
             </h2>
-            <p className="text-xl text-white/70 mb-12 max-w-md leading-relaxed">
+            <p className="text-base md:text-xl text-white/70 mb-12 max-w-md leading-relaxed">
               Décrivez votre projet et nous vous répondrons dans les 24 heures.
               Nos experts sont là pour faciliter votre transition.
             </p>
@@ -248,7 +248,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 relative shadow-2xl"
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 lg:p-12 relative shadow-2xl"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -368,7 +368,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="py-32 relative">
+      <section className="py-16 md:py-32 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/40" />
           <motion.div
@@ -385,13 +385,13 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-5xl md:text-7xl font-black text-white italic tracking-tighter mb-8 leading-none">
+            <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter mb-8 leading-none">
               Prêt à franchir <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">
                 le pas ?
               </span>
             </h2>
-            <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium">
+            <p className="text-base md:text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium">
               Rejoignez les expatriés qui vivent leur rêve thaïlandais.
               Contactez-nous dès aujourd&apos;hui pour un premier échange
               gratuit.
@@ -403,7 +403,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-4 px-12 py-6 bg-white text-[#022c31] font-black text-xl rounded-full transition-all shadow-2xl hover:shadow-white/20"
+              className="inline-flex items-center gap-4 px-8 md:px-12 py-4 md:py-6 bg-white text-[#022c31] font-black text-base md:text-xl rounded-full transition-all shadow-2xl hover:shadow-white/20"
             >
               <MessageCircle className="w-6 h-6 text-[#ff8c42] fill-current" />
               Contactez-nous sur WhatsApp
