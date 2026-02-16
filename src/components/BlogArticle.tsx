@@ -45,7 +45,7 @@ export default function BlogArticle({
   };
 
   return (
-    <div className="min-h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-medium">
+    <div className="min-h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-medium">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
@@ -54,7 +54,7 @@ export default function BlogArticle({
       <div className="fixed top-20 left-4 md:top-24 md:left-6 z-40">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all group"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-[#ffc857]/30 transition-all group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           <span className="text-sm font-bold tracking-widest uppercase">Retour au blog</span>
@@ -71,11 +71,11 @@ export default function BlogArticle({
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#022c31] via-[#022c31]/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent" />
           <div
             className="absolute inset-0 opacity-40"
             style={{
-              background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%)`,
+              background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%)`,
             }}
           />
         </div>
@@ -108,11 +108,11 @@ export default function BlogArticle({
               className="flex flex-wrap items-center gap-8 text-white/60 text-sm font-bold tracking-widest uppercase"
             >
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#ffc857]" />
+                <Calendar className="w-4 h-4 text-[#cbd5e1]" />
                 <span>{article.date}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#ffc857]" />
+                <Clock className="w-4 h-4 text-[#cbd5e1]" />
                 <span>Temps de lecture : {article.readTime}</span>
               </div>
             </motion.div>
@@ -122,8 +122,8 @@ export default function BlogArticle({
 
       {/* Article Content */}
       <section className="relative w-full py-12 md:py-24 overflow-hidden">
-        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[160px] opacity-[0.07] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#ffc857] rounded-full blur-[160px] opacity-[0.05] pointer-events-none" />
+        <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[160px] opacity-[0.07] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[160px] opacity-[0.05] pointer-events-none" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto">
@@ -131,7 +131,7 @@ export default function BlogArticle({
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-base md:text-xl lg:text-2xl text-[#ffc857] font-medium leading-relaxed mb-16 italic border-l-4 border-[#ff8c42] pl-6 md:pl-8"
+              className="text-base md:text-xl lg:text-2xl text-[#cbd5e1] font-medium leading-relaxed mb-16 italic border-l-4 border-[#cbd5e1] pl-6 md:pl-8"
             >
               {article.excerpt}
             </motion.p>
@@ -163,20 +163,20 @@ export default function BlogArticle({
 
       {/* Related Articles */}
       {relatedArticles.length > 0 && (
-        <section className="w-full py-12 md:py-24 bg-[#0d3b40]/50 border-t border-white/5">
+        <section className="w-full py-12 md:py-24 bg-[#1e293b]/50 border-t border-white/5">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-6">
               <div>
                 <h2 className="text-2xl md:text-4xl lg:text-5xl font-black italic tracking-tighter text-white mb-4">
                   Poursuivez{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite]">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite]">
                     votre voyage
                   </span>
                 </h2>
               </div>
               <Link
                 href="/blog"
-                className="group flex items-center gap-3 text-[#ff8c42] font-black text-sm uppercase tracking-widest"
+                className="group flex items-center gap-3 text-[#cbd5e1] font-black text-sm uppercase tracking-widest"
               >
                 Voir tout le blog
                 <MoveRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -192,7 +192,7 @@ export default function BlogArticle({
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
                     whileHover={{ y: -8 }}
-                    className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500"
+                    className="group relative flex flex-col h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ffc857]/40 transition-all duration-500"
                   >
                     <div className="relative aspect-video overflow-hidden">
                       <Image
@@ -202,7 +202,7 @@ export default function BlogArticle({
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#022c31] via-transparent to-transparent opacity-60" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60" />
                       <div className="absolute top-4 left-4">
                         <span
                           className={`px-3 py-1 rounded-full text-[11px] font-black text-white uppercase tracking-wider ${getCategoryColor(rel.category)}`}

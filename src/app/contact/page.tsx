@@ -41,20 +41,20 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#022c31] selection:bg-[#ff8c42] selection:text-white overflow-x-hidden">
+    <main className="min-h-screen bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a] overflow-x-hidden">
       {/* HERO SECTION */}
       <section className="relative w-full min-h-0 md:min-h-[80vh] flex items-center justify-center pt-24 pb-20 md:pb-40">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
             className="absolute inset-0 opacity-80"
             style={{
-              background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 50% 80%, #ffc857 0%, transparent 50%), radial-gradient(circle at 90% 90%, #064e3b 0%, transparent 50%)`,
+              background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 90%, #cbd5e1 0%, transparent 50%)`,
             }}
           />
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#ffc857] rounded-full blur-[120px] mix-blend-screen opacity-30"
+            className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-30"
           />
         </div>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
             >
               <Compass className="w-4 h-4" />
               <span>Assistance & Contact</span>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               className="text-3xl md:text-5xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter mb-8 italic"
             >
               Parlons de Votre <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                 Projet
               </span>
             </motion.h1>
@@ -108,7 +108,7 @@ export default function ContactPage() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
               Accompagnement
             </span>
-            <span className="text-2xl font-black text-white italic tracking-tighter">
+            <span className="text-2xl font-black text-[#ffc857] italic tracking-tighter">
               Conseiller local
             </span>
           </div>
@@ -117,8 +117,8 @@ export default function ContactPage() {
 
       {/* CONTACT INFO CARDS */}
       <section className="relative z-20 container mx-auto px-6 -mt-20 mb-16 md:mb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* WhatsApp Card - Highlighted */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* WhatsApp Card - Highlighted in Gold */}
           <motion.a
             href="https://wa.me/66614202619"
             target="_blank"
@@ -127,7 +127,7 @@ export default function ContactPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ scale: 1.02 }}
-            className="group relative p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-gradient-to-br from-[#ff8c42] to-[#ff7a21] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col items-start overflow-hidden"
+            className="group relative p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-gradient-to-br from-[#ffc857] to-[#ff8c42] shadow-[0_30px_60px_rgba(255,200,87,0.3)] flex flex-col items-start overflow-hidden"
           >
             <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/20 rounded-full blur-3xl group-hover:bg-white/30 transition-colors" />
             <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6">
@@ -147,37 +147,12 @@ export default function ContactPage() {
             </div>
           </motion.a>
 
-          {/* Phone Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
-          >
-            <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
-              <Phone className="w-7 h-7 text-[#ffc857]" />
-            </div>
-            <span className="text-white/40 text-sm font-bold uppercase tracking-widest mb-2">
-              Appelez-nous directement
-            </span>
-            <h3 className="text-2xl md:text-3xl font-black text-white italic mb-2">
-              Téléphone
-            </h3>
-            <p className="text-white font-bold text-xl mb-4">
-              +66 61 420 2619
-            </p>
-            <span className="text-white/40 text-xs font-bold uppercase tracking-wider mt-auto flex items-center gap-2">
-              <Sun className="w-3 h-3" /> Lun – Ven, 9h00 – 19h00
-            </span>
-          </motion.div>
-
           {/* Email Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.1 }}
             className="p-5 md:p-8 rounded-xl md:rounded-[2rem] bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-start"
           >
             <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
@@ -209,7 +184,7 @@ export default function ContactPage() {
           >
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic leading-[0.9] tracking-tighter mb-8">
               Envoyez-nous <br />
-              <span className="text-[#ffc857]">un message</span>
+              <span className="text-[#cbd5e1]">un message</span>
             </h2>
             <p className="text-base md:text-xl text-white/70 mb-12 max-w-md leading-relaxed">
               Décrivez votre projet et nous vous répondrons dans les 24 heures.
@@ -218,8 +193,8 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#064e3b] flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-[#ffc857]" />
+                <div className="w-10 h-10 rounded-full #cbd5e1 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[#cbd5e1]" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-lg">
@@ -231,8 +206,8 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#064e3b] flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-[#ffc857]" />
+                <div className="w-10 h-10 rounded-full #cbd5e1 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-[#cbd5e1]" />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-lg">
@@ -264,7 +239,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Jean"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ff8c42] transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#cbd5e1] transition-colors"
                     />
                   </div>
                 </div>
@@ -278,7 +253,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Dupont"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ff8c42] transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#cbd5e1] transition-colors"
                     />
                   </div>
                 </div>
@@ -295,7 +270,7 @@ export default function ContactPage() {
                       type="email"
                       required
                       placeholder="jean@example.com"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ff8c42] transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#cbd5e1] transition-colors"
                     />
                   </div>
                 </div>
@@ -308,7 +283,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       placeholder="+33 6 00 00 00 00"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ff8c42] transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#cbd5e1] transition-colors"
                     />
                   </div>
                 </div>
@@ -319,12 +294,12 @@ export default function ContactPage() {
                   Sujet de votre demande
                 </label>
                 <div className="relative">
-                  <select className="w-full appearance-none bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white focus:outline-none focus:border-[#ff8c42] transition-colors cursor-pointer">
+                  <select className="w-full appearance-none bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white focus:outline-none focus:border-[#cbd5e1] transition-colors cursor-pointer">
                     {sujetOptions.map((opt) => (
                       <option
                         key={opt}
                         value={opt}
-                        className="bg-[#022c31] text-white"
+                        className="bg-[#0f172a] text-white"
                       >
                         {opt}
                       </option>
@@ -342,14 +317,14 @@ export default function ContactPage() {
                   rows={4}
                   required
                   placeholder="Décrivez votre projet ici..."
-                  className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#ff8c42] transition-colors resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[#cbd5e1] transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className="w-full group relative px-10 py-5 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-[0_20px_50px_rgba(255,140,66,0.3)] flex items-center justify-center gap-3 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full group relative px-10 py-5 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-[0_20px_50px_rgba(203,213,225,0.3)] flex items-center justify-center gap-3 overflow-hidden disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <span className="relative z-10">
                   {isSubmitted ? "Message envoyé !" : "Envoyer le message"}
@@ -376,7 +351,7 @@ export default function ContactPage() {
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-full bg-[#ff8c42] blur-[150px] rounded-[100%] opacity-10"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-full bg-[#cbd5e1] blur-[150px] rounded-[100%] opacity-10"
           />
         </div>
 
@@ -389,7 +364,7 @@ export default function ContactPage() {
           >
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter mb-8 leading-none">
               Prêt à franchir <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] to-[#cbd5e1] pr-2">
                 le pas ?
               </span>
             </h2>
@@ -405,9 +380,9 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-4 px-8 md:px-12 py-4 md:py-6 bg-white text-[#022c31] font-black text-base md:text-xl rounded-full transition-all shadow-2xl hover:shadow-white/20"
+              className="inline-flex items-center gap-4 px-8 md:px-12 py-4 md:py-6 bg-white text-[#0f172a] font-black text-base md:text-xl rounded-full transition-all shadow-2xl hover:shadow-white/20"
             >
-              <MessageCircle className="w-6 h-6 text-[#ff8c42] fill-current" />
+              <MessageCircle className="w-6 h-6 text-[#cbd5e1] fill-current" />
               Contactez-nous sur WhatsApp
             </motion.a>
           </motion.div>

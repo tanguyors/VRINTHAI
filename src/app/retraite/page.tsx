@@ -204,13 +204,13 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
       <div
         className="absolute inset-0 opacity-80"
         style={{
-          background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`,
+          background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
       <motion.div
         animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
       />
     </div>
   );
@@ -362,9 +362,9 @@ export default function RetraitePage() {
   return (
     <div
       ref={containerRef}
-      className="h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans overflow-x-hidden overflow-y-auto"
+      className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto"
     >
-      <main className="bg-[#022c31] selection:bg-[#ff8c42] selection:text-white">
+      <main className="bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a]">
 
         {/* ═══════════════ SECTION 1 — HERO ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
@@ -380,7 +380,7 @@ export default function RetraitePage() {
             <div
               className="absolute inset-0 opacity-80"
               style={{
-                background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 50% 80%, #ffc857 0%, transparent 50%), radial-gradient(circle at 90% 90%, #064e3b 0%, transparent 50%)`,
+                background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 90%, #cbd5e1 0%, transparent 50%)`,
               }}
             />
             <motion.div
@@ -390,7 +390,7 @@ export default function RetraitePage() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#ff8c42] rounded-full blur-[120px] mix-blend-screen opacity-30"
+              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-30"
             />
           </div>
 
@@ -400,7 +400,7 @@ export default function RetraitePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
               >
                 <Palmtree className="w-4 h-4" />
                 <span>Retraite &amp; Sérénité</span>
@@ -414,7 +414,7 @@ export default function RetraitePage() {
               >
                 Retraite
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   en Thaïlande
                 </span>
               </motion.h1>
@@ -446,13 +446,13 @@ export default function RetraitePage() {
               <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
                 Destinations
               </span>
-              <span className="text-2xl font-black text-white italic tracking-tighter">
+              <span className="text-2xl font-black text-[#ffc857] italic tracking-tighter">
                 4 villes
               </span>
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#022c31] z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#0f172a] z-10 pointer-events-none" />
         </section>
 
         {/* ═══════════════ SECTION 2 — VISA RETRAITE ═══════════════ */}
@@ -472,7 +472,7 @@ export default function RetraitePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Le visa{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   retraite
                 </span>
               </h2>
@@ -490,7 +490,7 @@ export default function RetraitePage() {
                       whileHover={{ y: -8, transition: { duration: 0.2 } }}
                       viewport={{ once: true, margin: "-50px" }}
                       transition={{ duration: 0.6, delay: i * 0.1 }}
-                      className="relative bg-gradient-to-br from-[#ff8c42] to-[#ffc857] rounded-xl md:rounded-[2rem] p-5 md:p-8 group overflow-hidden shadow-[0_20px_50px_rgba(255,140,66,0.3)]"
+                      className="relative bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] rounded-xl md:rounded-[2rem] p-5 md:p-8 group overflow-hidden shadow-[0_20px_50px_rgba(203,213,225,0.3)]"
                     >
                       <div className="absolute -inset-24 bg-white opacity-0 group-hover:opacity-10 blur-[80px] transition-opacity duration-500 rounded-full" />
                       <div className="relative z-10">
@@ -528,11 +528,11 @@ export default function RetraitePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -542,7 +542,7 @@ export default function RetraitePage() {
                         {card.description}
                       </p>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -569,7 +569,7 @@ export default function RetraitePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Santé et{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   assurance
                 </span>
               </h2>
@@ -586,11 +586,11 @@ export default function RetraitePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -600,7 +600,7 @@ export default function RetraitePage() {
                         {card.description}
                       </p>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -627,7 +627,7 @@ export default function RetraitePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Budget mensuel{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   pour un retraité
                 </span>
               </h2>
@@ -645,7 +645,7 @@ export default function RetraitePage() {
                       whileHover={{ y: -8, transition: { duration: 0.2 } }}
                       viewport={{ once: true, margin: "-50px" }}
                       transition={{ duration: 0.6, delay: i * 0.1 }}
-                      className="relative bg-gradient-to-br from-[#ff8c42] to-[#ffc857] rounded-xl md:rounded-[2rem] p-5 md:p-8 group overflow-hidden shadow-[0_20px_50px_rgba(255,140,66,0.3)]"
+                      className="relative bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] rounded-xl md:rounded-[2rem] p-5 md:p-8 group overflow-hidden shadow-[0_20px_50px_rgba(203,213,225,0.3)]"
                     >
                       <div className="absolute -inset-24 bg-white opacity-0 group-hover:opacity-10 blur-[80px] transition-opacity duration-500 rounded-full" />
                       <div className="relative z-10">
@@ -696,11 +696,11 @@ export default function RetraitePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -720,7 +720,7 @@ export default function RetraitePage() {
                             <span className="text-sm font-medium text-white/60">
                               {fee.level}
                             </span>
-                            <span className="text-sm font-black text-[#ffc857]">
+                            <span className="text-sm font-black text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300">
                               {fee.range}
                             </span>
                           </div>
@@ -751,7 +751,7 @@ export default function RetraitePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Les erreurs{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   à éviter
                 </span>
               </h2>
@@ -768,11 +768,11 @@ export default function RetraitePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -782,7 +782,7 @@ export default function RetraitePage() {
                         {card.description}
                       </p>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -800,11 +800,11 @@ export default function RetraitePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: (i + 3) * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -814,7 +814,7 @@ export default function RetraitePage() {
                         {card.description}
                       </p>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -841,7 +841,7 @@ export default function RetraitePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Questions{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   fréquentes
                 </span>
               </h2>
@@ -857,7 +857,7 @@ export default function RetraitePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-30px" }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                   >
                     <button
                       onClick={() => setOpenFaqIndex(isOpen ? null : i)}
@@ -903,7 +903,7 @@ export default function RetraitePage() {
             <div
               className="absolute inset-0"
               style={{
-                background: `radial-gradient(circle at 30% 20%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 70% 80%, #ffc857 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0d3b40 0%, transparent 60%), radial-gradient(circle at 10% 80%, #064e3b 0%, transparent 50%), radial-gradient(circle at 90% 20%, #022c31 0%, transparent 50%)`,
+                background: `radial-gradient(circle at 30% 20%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 70% 80%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 60%), radial-gradient(circle at 10% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 20%, #0f172a 0%, transparent 50%)`,
               }}
             />
             <motion.div
@@ -913,7 +913,7 @@ export default function RetraitePage() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen opacity-20"
+              className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-20"
             />
             <motion.div
               animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
@@ -923,7 +923,7 @@ export default function RetraitePage() {
                 ease: "easeInOut",
                 delay: 2,
               }}
-              className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#ffc857] rounded-full blur-[120px] mix-blend-screen opacity-20"
+              className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-20"
             />
           </div>
 
@@ -937,7 +937,7 @@ export default function RetraitePage() {
                 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic mb-8"
               >
                 Besoin d&apos;un{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   accompagnement ?
                 </span>
               </motion.h2>
@@ -961,7 +961,7 @@ export default function RetraitePage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10"
               >
-                <button className="group relative px-10 py-5 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,140,66,0.3)] flex items-center gap-3">
+                <button className="group relative px-10 py-5 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(203,213,225,0.3)] flex items-center gap-3">
                   <MessageCircle className="w-6 h-6" />
                   <span>Contactez-nous sur WhatsApp</span>
                 </button>
@@ -994,7 +994,7 @@ export default function RetraitePage() {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#ff8c42] hover:bg-[#ff7a21] text-white shadow-[0_10px_30px_rgba(255,140,66,0.4)] flex items-center justify-center transition-colors duration-300 hover:scale-110 active:scale-95"
+            className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white shadow-[0_10px_30px_rgba(203,213,225,0.4)] flex items-center justify-center transition-colors duration-300 hover:scale-110 active:scale-95"
           >
             <ChevronUp className="w-6 h-6" />
           </motion.button>

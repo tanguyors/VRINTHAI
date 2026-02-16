@@ -18,7 +18,7 @@ export default function BlogPage() {
       : articles.filter((a) => a.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans">
       <main>
 
         {/* ═══════════════ HERO (COMPACT) ═══════════════ */}
@@ -27,7 +27,7 @@ export default function BlogPage() {
             <div
               className="absolute inset-0"
               style={{
-                background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 50% 80%, #ffc857 0%, transparent 50%), radial-gradient(circle at 90% 90%, #064e3b 0%, transparent 50%)`,
+                background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 90%, #cbd5e1 0%, transparent 50%)`,
               }}
             />
             <motion.div
@@ -37,7 +37,7 @@ export default function BlogPage() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#ff8c42] rounded-full blur-[120px] mix-blend-screen opacity-20"
+              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-20"
             />
           </div>
 
@@ -47,7 +47,7 @@ export default function BlogPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
               >
                 <BookOpen className="w-4 h-4" />
                 <span>Blog &amp; Ressources</span>
@@ -60,7 +60,7 @@ export default function BlogPage() {
                 className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.95] tracking-tighter mb-6 italic"
               >
                 Le Blog{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   Expatriation
                 </span>
               </motion.h1>
@@ -93,8 +93,8 @@ export default function BlogPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                   activeCategory === cat
-                    ? "bg-[#ff8c42] text-white shadow-[0_10px_30px_rgba(255,140,66,0.3)]"
-                    : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/10"
+                    ? "bg-[#cbd5e1] text-[#0f172a] shadow-[0_10px_30px_rgba(203,213,225,0.3)]"
+                    : "bg-white/5 text-white/60 hover:bg-[#ffc857]/20 hover:text-[#ffc857] border border-white/10"
                 }`}
               >
                 {cat}
@@ -121,9 +121,9 @@ export default function BlogPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.05 }}
                   whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] cursor-pointer"
+                  className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] overflow-hidden hover:border-[#ffc857]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] cursor-pointer"
                 >
-                  <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                  <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
 
                   {/* Image */}
                   <div className="relative aspect-video overflow-hidden">
@@ -134,7 +134,7 @@ export default function BlogPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#022c31] via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent opacity-60" />
                     <div className="absolute top-4 left-4">
                       <span
                         className={`px-3 py-1 rounded-full text-[11px] font-black text-white uppercase tracking-wider ${
@@ -165,7 +165,7 @@ export default function BlogPage() {
                       </span>
                     </div>
                     <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                      <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                      <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                     </div>
                   </div>
                 </motion.article>

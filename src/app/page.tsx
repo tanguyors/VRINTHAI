@@ -92,8 +92,8 @@ function CostOfLivingSection() {
   }, [budget, multiplier]);
 
   const lifestyle = budget < 900 ? { label: "Économique", color: "text-white/60" }
-    : budget < 1500 ? { label: "Confortable", color: "text-[#ffc857]" }
-    : budget < 2500 ? { label: "Premium", color: "text-[#ff8c42]" }
+    : budget < 1500 ? { label: "Confortable", color: "text-[#cbd5e1]" }
+    : budget < 2500 ? { label: "Premium", color: "text-[#cbd5e1]" }
     : { label: "Luxe", color: "text-white" };
 
   const expenses = [
@@ -108,7 +108,7 @@ function CostOfLivingSection() {
   const maxExpense = breakdown.loyer;
 
   return (
-    <section className="relative py-16 md:py-32 bg-[#022c31] overflow-hidden min-h-0 md:min-h-screen">
+    <section className="relative py-16 md:py-32 bg-[#0f172a] overflow-hidden min-h-0 md:min-h-screen">
       {/* Background Image + Decorative Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -118,12 +118,12 @@ function CostOfLivingSection() {
           className="object-cover opacity-15"
         />
         <div className="absolute inset-0 opacity-80" style={{
-          background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+          background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
         }} />
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
         />
       </div>
 
@@ -133,7 +133,7 @@ function CostOfLivingSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
           >
             <Compass className="w-4 h-4" />
             <span>Optimisez votre pouvoir d&apos;achat</span>
@@ -145,7 +145,7 @@ function CostOfLivingSection() {
             className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
           >
             Coût de la vie <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande</span>
           </motion.h2>
         </div>
 
@@ -156,8 +156,8 @@ function CostOfLivingSection() {
               <div key={i} className="group relative">
                 <div className="flex justify-between items-end mb-4">
                   <div className="flex items-center gap-4 text-white">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-[#ff8c42]/20 group-hover:border-[#ff8c42]/30 transition-all duration-300">
-                      <row.icon size={22} className="text-[#ff8c42]" />
+                    <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 border border-white/10 group-hover:bg-[#ffc857]/20 group-hover:border-[#ffc857]/30 transition-all duration-300">
+                      <row.icon size={22} className="text-[#cbd5e1]" />
                     </div>
                     <span className="text-base md:text-xl font-bold tracking-tight">{row.item}</span>
                   </div>
@@ -165,7 +165,7 @@ function CostOfLivingSection() {
                     key={row.value}
                     initial={{ scale: 1.1 }}
                     animate={{ scale: 1 }}
-                    className="text-[#ffc857] font-black text-xl italic"
+                    className="text-[#cbd5e1] font-black text-xl italic"
                   >
                     {row.value} €
                   </motion.span>
@@ -174,7 +174,7 @@ function CostOfLivingSection() {
                   <motion.div
                     animate={{ width: `${Math.round((row.value / maxExpense) * 100)}%` }}
                     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                    className="h-full bg-gradient-to-r from-[#ff8c42] to-[#ffc857] relative shadow-[0_0_20px_rgba(255,140,66,0.4)]"
+                    className="h-full bg-gradient-to-r from-[#cbd5e1] to-[#cbd5e1] relative shadow-[0_0_20px_rgba(203,213,225,0.4)]"
                   />
                 </div>
               </div>
@@ -189,8 +189,8 @@ function CostOfLivingSection() {
               viewport={{ once: true }}
               className="relative overflow-hidden p-1 rounded-3xl bg-gradient-to-br from-white/20 to-transparent"
             >
-              <div className="relative z-10 p-5 md:p-8 lg:p-10 rounded-[22px] bg-[#0d3b40]/80 backdrop-blur-xl border border-white/10 h-full">
-                <div className="flex items-center gap-2 mb-6 text-[#ffc857] text-[10px] font-bold uppercase tracking-[0.3em]">
+              <div className="relative z-10 p-5 md:p-8 lg:p-10 rounded-[22px] bg-[#1e293b]/80 backdrop-blur-xl border border-white/10 h-full">
+                <div className="flex items-center gap-2 mb-6 text-[#cbd5e1] text-[10px] font-bold uppercase tracking-[0.3em]">
                   <Wallet className="w-4 h-4" />
                   <span>Simulateur budget</span>
                 </div>
@@ -203,8 +203,8 @@ function CostOfLivingSection() {
                       onClick={() => setMode(m)}
                       className={`flex-1 py-3 rounded-xl text-sm font-black uppercase tracking-widest transition-all duration-300 ${
                         mode === m
-                          ? "bg-[#ff8c42] text-white shadow-[0_10px_30px_rgba(255,140,66,0.3)]"
-                          : "bg-white/5 text-white/40 hover:bg-white/10"
+                          ? "bg-[#cbd5e1] text-[#0f172a] shadow-[0_10px_30px_rgba(203,213,225,0.3)]"
+                          : "bg-white/5 text-white/40 hover:bg-[#ffc857]/20"
                       }`}
                     >
                       {m === "solo" ? "Solo" : "Couple"}
@@ -218,12 +218,12 @@ function CostOfLivingSection() {
                     key={budget}
                     initial={{ scale: 1.05 }}
                     animate={{ scale: 1 }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-black italic text-white tracking-tighter leading-none drop-shadow-[0_0_15px_rgba(255,200,87,0.3)]"
+                    className="text-4xl md:text-5xl lg:text-6xl font-black italic text-white tracking-tighter leading-none drop-shadow-[0_0_15px_rgba(203,213,225,0.3)]"
                   >
                     {budget.toLocaleString()} €
                   </motion.div>
                   <div className="flex items-center gap-3 mt-2">
-                    <span className="text-[#ffc857] font-bold text-lg">par mois</span>
+                    <span className="text-[#cbd5e1] font-bold text-lg">par mois</span>
                     <span className={`text-xs font-black uppercase tracking-widest ${lifestyle.color}`}>
                       — {lifestyle.label}
                     </span>
@@ -239,9 +239,9 @@ function CostOfLivingSection() {
                     step={50}
                     value={budget}
                     onChange={(e) => setBudget(Number(e.target.value))}
-                    className="w-full h-2 rounded-full appearance-none cursor-pointer bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-br [&::-webkit-slider-thumb]:from-[#ff8c42] [&::-webkit-slider-thumb]:to-[#ffc857] [&::-webkit-slider-thumb]:shadow-[0_0_20px_rgba(255,140,66,0.5)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-br [&::-moz-range-thumb]:from-[#ff8c42] [&::-moz-range-thumb]:to-[#ffc857] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-grab"
+                    className="w-full h-2 rounded-full appearance-none cursor-pointer bg-white/10 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gradient-to-br [&::-webkit-slider-thumb]:from-[#cbd5e1] [&::-webkit-slider-thumb]:to-[#cbd5e1] [&::-webkit-slider-thumb]:shadow-[0_0_20px_rgba(203,213,225,0.5)] [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white/30 [&::-webkit-slider-thumb]:cursor-grab [&::-webkit-slider-thumb]:active:cursor-grabbing [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gradient-to-br [&::-moz-range-thumb]:from-[#cbd5e1] [&::-moz-range-thumb]:to-[#cbd5e1] [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-white/30 [&::-moz-range-thumb]:cursor-grab"
                     style={{
-                      background: `linear-gradient(to right, #ff8c42 0%, #ffc857 ${((budget - 500) / 3500) * 100}%, rgba(255,255,255,0.1) ${((budget - 500) / 3500) * 100}%, rgba(255,255,255,0.1) 100%)`
+                      background: `linear-gradient(to right, #cbd5e1 0%, #cbd5e1 ${((budget - 500) / 3500) * 100}%, rgba(255,255,255,0.1) ${((budget - 500) / 3500) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
                   <div className="flex justify-between mt-2 text-[10px] text-white/30 font-bold uppercase tracking-widest">
@@ -265,7 +265,7 @@ function CostOfLivingSection() {
                   ].map((item) => (
                     <div key={item.label} className="flex items-center justify-between text-sm">
                       <div className="flex items-center gap-3 text-white/60">
-                        <item.icon size={14} className="text-[#ff8c42]" />
+                        <item.icon size={14} className="text-[#cbd5e1]" />
                         <span>{item.label}</span>
                       </div>
                       <span className="font-black text-white italic">{item.value} €</span>
@@ -273,7 +273,7 @@ function CostOfLivingSection() {
                   ))}
                 </div>
 
-                <button className="group relative w-full py-5 px-6 bg-[#ff8c42] hover:bg-[#ff7a21] text-white rounded-2xl font-black text-lg transition-all duration-300 shadow-[0_20px_50px_rgba(255,140,66,0.2)] hover:shadow-[0_25px_60px_rgba(255,140,66,0.4)] hover:-translate-y-1">
+                <button className="group relative w-full py-5 px-6 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:text-white rounded-2xl font-black text-lg transition-all duration-300 shadow-[0_20px_50px_rgba(203,213,225,0.2)] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)] hover:-translate-y-1">
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Contactez un conseiller
                     <motion.span animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>→</motion.span>
@@ -339,12 +339,12 @@ function VisaAccordionSection() {
           className="object-cover opacity-15"
         />
         <div className="absolute inset-0 opacity-80" style={{
-          background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+          background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
         }} />
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
         />
       </div>
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
@@ -353,12 +353,12 @@ function VisaAccordionSection() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-4 text-[#ffc857] text-[10px] font-bold tracking-[0.3em] uppercase"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-4 text-[#cbd5e1] text-[10px] font-bold tracking-[0.3em] uppercase"
           >
             Procédures administratives
           </motion.div>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white italic tracking-tighter leading-tight">
-            Types de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">visas</span>
+            Types de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] to-[#cbd5e1] pr-2">visas</span>
           </h2>
           <p className="mt-4 text-white/60 font-medium">Trouvez le visa adapté à votre projet d&apos;expatriation en Thaïlande</p>
         </div>
@@ -377,8 +377,8 @@ function VisaAccordionSection() {
                 viewport={{ once: true }}
                 className={`group overflow-hidden rounded-2xl border transition-all duration-500 ${
                   isOpen
-                    ? "bg-white/10 backdrop-blur-xl border-[#ff8c42]/50 shadow-[0_0_40px_rgba(255,140,66,0.1)]"
-                    : "bg-white/5 backdrop-blur-md border-white/10 hover:border-white/20"
+                    ? "bg-white/10 backdrop-blur-xl border-[#cbd5e1]/50 shadow-[0_0_40px_rgba(203,213,225,0.1)]"
+                    : "bg-white/5 backdrop-blur-md border-white/10 hover:border-[#ffc857]/40"
                 }`}
               >
                 <button
@@ -386,24 +386,24 @@ function VisaAccordionSection() {
                   className="w-full flex items-center justify-between p-6 text-left relative"
                 >
                   {isOpen && (
-                    <motion.div layoutId="visa-border-accent" className="absolute left-0 top-0 bottom-0 w-1 bg-[#ff8c42]" />
+                    <motion.div layoutId="visa-border-accent" className="absolute left-0 top-0 bottom-0 w-1 bg-[#cbd5e1]" />
                   )}
                   <div className="flex items-center gap-5">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${isOpen ? "bg-[#ff8c42] text-white" : "bg-white/10 text-[#ffc857]"}`}>
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${isOpen ? "bg-[#cbd5e1] text-[#0f172a]" : "bg-white/10 text-[#cbd5e1]"}`}>
                       <Icon className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className={`text-xl font-black italic tracking-tighter transition-colors ${isOpen ? "text-[#ffc857]" : "text-white"}`}>
+                      <h3 className={`text-xl font-black italic tracking-tighter transition-colors ${isOpen ? "text-[#cbd5e1]" : "text-white"}`}>
                         {visa.name}
                       </h3>
                       <span className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Catégorie visa long séjour</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-6">
-                    <div className="hidden sm:block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-black text-[#ff8c42] uppercase tracking-widest">
+                    <div className="hidden sm:block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[11px] font-black text-[#cbd5e1] uppercase tracking-widest">
                       {visa.duration}
                     </div>
-                    <ChevronDown className={`w-5 h-5 text-white/40 transition-transform duration-500 ${isOpen ? "rotate-180 text-[#ffc857]" : ""}`} />
+                    <ChevronDown className={`w-5 h-5 text-white/40 transition-transform duration-500 ${isOpen ? "rotate-180 text-[#cbd5e1]" : ""}`} />
                   </div>
                 </button>
 
@@ -418,21 +418,21 @@ function VisaAccordionSection() {
                       <div className="px-6 pb-8 pt-2 grid md:grid-cols-2 gap-8 border-t border-white/10">
                         <div className="space-y-4">
                           <div>
-                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#ffc857] font-black mb-2">Conditions d&apos;éligibilité</p>
+                            <p className="text-[10px] uppercase tracking-[0.3em] text-[#cbd5e1] font-black mb-2">Conditions d&apos;éligibilité</p>
                             <p className="text-white/80 font-medium leading-relaxed">{visa.conditions}</p>
                           </div>
-                          <button className="group relative px-6 py-3 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-sm rounded-xl transition-all flex items-center gap-2 shadow-[0_10px_30px_rgba(255,140,66,0.2)]">
+                          <button className="group relative px-6 py-3 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-sm rounded-xl transition-all flex items-center gap-2 shadow-[0_10px_30px_rgba(203,213,225,0.2)]">
                             En savoir plus
                             <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </button>
                         </div>
                         <div>
-                          <p className="text-[10px] uppercase tracking-[0.3em] text-[#ffc857] font-black mb-3">Avantages clés</p>
+                          <p className="text-[10px] uppercase tracking-[0.3em] text-[#cbd5e1] font-black mb-3">Avantages clés</p>
                           <ul className="space-y-3">
                             {visa.advantages.map((adv, idx) => (
                               <li key={idx} className="flex items-start gap-3 text-sm text-white/70">
-                                <div className="mt-1 w-4 h-4 rounded-full bg-[#064e3b] flex items-center justify-center flex-shrink-0">
-                                  <Check className="w-2.5 h-2.5 text-[#ffc857]" />
+                                <div className="mt-1 w-4 h-4 rounded-full #cbd5e1 flex items-center justify-center flex-shrink-0">
+                                  <Check className="w-2.5 h-2.5 text-[#cbd5e1]" />
                                 </div>
                                 {adv}
                               </li>
@@ -450,7 +450,7 @@ function VisaAccordionSection() {
       </div>
 
       {/* Decorative glow */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#ff8c42] rounded-full blur-[150px] opacity-10 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#cbd5e1] rounded-full blur-[150px] opacity-10 -translate-x-1/2 pointer-events-none" />
     </section>
   );
 }
@@ -459,6 +459,7 @@ export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [activeSteps, setActiveSteps] = useState<boolean[]>([false, false, false, false, false, false]);
 
   // Show/hide back to top button
   useEffect(() => {
@@ -581,9 +582,9 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans overflow-x-hidden overflow-y-auto">
+    <div ref={containerRef} className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-clip bg-[#022c31]">
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-clip bg-[#0f172a]">
         <div className="absolute inset-0 z-0">
           {/* Background Photo */}
           <Image
@@ -596,13 +597,13 @@ export default function HomePage() {
           <div
             className="absolute inset-0 opacity-80"
             style={{
-              background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 50% 80%, #ffc857 0%, transparent 50%), radial-gradient(circle at 90% 90%, #064e3b 0%, transparent 50%)`,
+              background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 90%, #cbd5e1 0%, transparent 50%)`,
             }}
           />
           <motion.div
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#ffc857] rounded-full blur-[120px] mix-blend-screen opacity-30"
+            className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-30"
           />
         </div>
 
@@ -612,7 +613,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
             >
               <Compass className="w-4 h-4" />
               <span>S&apos;installer au pays du sourire</span>
@@ -626,7 +627,7 @@ export default function HomePage() {
             >
               Vivre en Thaïlande:
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                 Expatriation simplifiée
               </span>
             </motion.h1>
@@ -648,7 +649,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
-              <button className="group relative px-10 py-5 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,140,66,0.3)] flex items-center gap-3 overflow-hidden">
+              <button className="group relative px-10 py-5 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(203,213,225,0.3)] flex items-center gap-3 overflow-hidden">
                 <span className="relative z-10">Contact</span>
                 <MoveRight className="relative z-10 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -670,18 +671,18 @@ export default function HomePage() {
             <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
               Vibe
             </span>
-            <span className="text-2xl font-black text-white italic tracking-tighter">
+            <span className="text-2xl font-black text-[#ffc857] italic tracking-tighter">
               Sabai Sabai
             </span>
           </div>
         </div>
 
         {/* Gradient fade to next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#022c31] z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#0f172a] z-10 pointer-events-none" />
       </section>
 
       {/* 2. FEATURES GRID */}
-      <section className="py-16 md:py-32 relative overflow-hidden bg-[#022c31] selection:bg-[#ff8c42] selection:text-white min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-16 md:py-32 relative overflow-hidden bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a] min-h-0 md:min-h-screen flex flex-col justify-center">
         {/* Background Image + Decorative Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
@@ -691,12 +692,12 @@ export default function HomePage() {
             className="object-cover opacity-15"
           />
           <div className="absolute inset-0 opacity-80" style={{
-            background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+            background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
           />
         </div>
 
@@ -706,7 +707,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
             >
               <Compass className="w-4 h-4" />
               <span>Les avantages de l&apos;expatriation</span>
@@ -719,7 +720,7 @@ export default function HomePage() {
               className="text-3xl md:text-5xl lg:text-7xl font-black text-white leading-[0.9] tracking-tighter italic"
             >
               Pourquoi vivre <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande en 2025 ?</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">en Thaïlande en 2025 ?</span>
             </motion.h2>
           </div>
 
@@ -741,13 +742,13 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 whileHover={{ y: -8, transition: { duration: 0.2 } }}
-                className="group relative p-5 md:p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2.5rem] hover:border-[#ff8c42]/40 transition-all duration-500 overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                className="group relative p-5 md:p-8 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2.5rem] hover:border-[#ffc857]/40 transition-all duration-500 overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
               >
                 {/* Subtle Hover Glow */}
-                <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center text-white mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center text-[#0f172a] group-hover:text-white mb-8 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-[#cbd5e1]/20 group-hover:shadow-[#ffc857]/40">
                     {React.cloneElement(feature.icon as React.ReactElement<{ size: number; strokeWidth: number }>, {
                       size: 28,
                       strokeWidth: 2.5
@@ -759,7 +760,7 @@ export default function HomePage() {
                   </h3>
 
                   <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                    <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                    <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                   </div>
                 </div>
               </motion.div>
@@ -778,12 +779,12 @@ export default function HomePage() {
             className="object-cover opacity-15"
           />
           <div className="absolute inset-0 opacity-80" style={{
-            background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+            background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -793,14 +794,14 @@ export default function HomePage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff8c42]/10 border border-[#ff8c42]/20 mb-6 text-[#ff8c42] text-xs font-bold tracking-widest uppercase"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#cbd5e1]/10 border border-[#cbd5e1]/20 mb-6 text-[#cbd5e1] text-xs font-bold tracking-widest uppercase"
             >
               <Compass className="w-3 h-3" />
               <span>Pourquoi choisir la Thaïlande ?</span>
             </motion.div>
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter leading-[0.9] mb-8">
               Les avantages <br />
-              <span className="text-[#ffc857]">de s&apos;installer</span>
+              <span className="text-[#cbd5e1]">de s&apos;installer</span>
             </h2>
             <p className="text-base md:text-xl text-white/80 font-medium leading-relaxed">
               S&apos;installer en Thaïlande en tant qu&apos;expatrié offre des conditions uniques : coût de la vie dérisoire, climat paradisiaque, soins de santé abordables et qualité de vie élevée.
@@ -814,7 +815,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="md:col-span-2 group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between min-h-[280px] md:min-h-[400px]"
+              className="md:col-span-2 group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] p-6 md:p-10 bg-gradient-to-br from-[#ffc857] to-[#ff8c42] shadow-[0_30px_60px_rgba(255,200,87,0.35)] hover:shadow-[0_35px_70px_rgba(255,200,87,0.5)] flex flex-col justify-between min-h-[280px] md:min-h-[400px] transition-all duration-300"
             >
               <div className="relative z-10">
                 <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-8 border border-white/30">
@@ -837,13 +838,13 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:bg-white/15 transition-all duration-300"
+              className="group bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#ffc857]/50 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:bg-white/15 transition-all duration-300 hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-[#ffc857]/30">
-                  <Globe className="w-6 h-6 text-[#ffc857]" />
+                <div className="w-12 h-12 rounded-xl bg-[#cbd5e1]/20 group-hover:bg-[#ffc857]/30 flex items-center justify-center mb-6 border border-[#cbd5e1]/30 group-hover:border-[#ffc857]/50 transition-all duration-300">
+                  <Globe className="w-6 h-6 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300" />
                 </div>
-                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4">Nomades Digitaux</h3>
+                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4 group-hover:text-[#ffc857] transition-colors duration-300">Nomades Digitaux</h3>
                 <p className="text-white/70 font-medium">Internet ultra-rapide, coworkings de classe mondiale et communauté internationale dynamique.</p>
               </div>
             </motion.div>
@@ -855,13 +856,13 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
-                  <Briefcase className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#ffc857]/40 transition-all duration-300">
+                  <Briefcase className="w-6 h-6 text-white group-hover:text-[#ffc857] transition-colors duration-300" />
                 </div>
-                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4">Entrepreneurs</h3>
+                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4 group-hover:text-[#ffc857] transition-colors duration-300">Entrepreneurs</h3>
                 <p className="text-white/70 font-medium">Marché en pleine croissance, coûts opérationnels réduits et avantages fiscaux via le BOI.</p>
               </div>
             </motion.div>
@@ -873,13 +874,13 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
-                  <Users className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#ffc857]/40 transition-all duration-300">
+                  <Users className="w-6 h-6 text-white group-hover:text-[#ffc857] transition-colors duration-300" />
                 </div>
-                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4">Familles</h3>
+                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4 group-hover:text-[#ffc857] transition-colors duration-300">Familles</h3>
                 <p className="text-white/70 font-medium">Écoles internationales prestigieuses, sécurité exceptionnelle et proximité avec la nature sauvage.</p>
               </div>
             </motion.div>
@@ -891,13 +892,13 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-white/30 transition-all"
+              className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl md:rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
-                  <Compass className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 group-hover:bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#ffc857]/40 transition-all duration-300">
+                  <Compass className="w-6 h-6 text-white group-hover:text-[#ffc857] transition-colors duration-300" />
                 </div>
-                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4">Jeunes Actifs</h3>
+                <h3 className="text-3xl font-black text-white italic tracking-tighter mb-4 group-hover:text-[#ffc857] transition-colors duration-300">Jeunes Actifs</h3>
                 <p className="text-white/70 font-medium">Expérience asiatique immersive, opportunités de carrière uniques et soif d&apos;aventure quotidienne.</p>
               </div>
             </motion.div>
@@ -915,11 +916,11 @@ export default function HomePage() {
         </div>
 
         {/* Decorative Background Glows */}
-        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-[#064e3b] rounded-full blur-[120px] opacity-20 pointer-events-none" />
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] #cbd5e1 rounded-full blur-[120px] opacity-20 pointer-events-none" />
       </section>
 
       {/* 4. DÉMARCHES TIMELINE */}
-      <section className="py-12 md:py-24 relative overflow-hidden bg-[#022c31] min-h-0 md:min-h-screen">
+      <section className="py-12 md:py-24 relative overflow-hidden bg-[#0f172a] min-h-0 md:min-h-screen">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1920&q=80"
@@ -928,21 +929,21 @@ export default function HomePage() {
             className="object-cover opacity-15"
           />
           <div className="absolute inset-0 opacity-80" style={{
-            background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+            background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-10 md:mb-20">
-            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 text-[#ffc857] text-[10px] font-bold tracking-[0.3em] uppercase">
+            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-4 text-[#cbd5e1] text-[10px] font-bold tracking-[0.3em] uppercase">
               Le parcours pas à pas
             </motion.div>
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black text-white italic tracking-tighter leading-none mb-6">
-              Démarches pour <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] to-[#ffc857] pr-2">s&apos;expatrier</span>
+              Démarches pour <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] to-[#cbd5e1] pr-2">s&apos;expatrier</span>
             </h2>
             <p className="text-white/60 max-w-xl mx-auto font-medium">
               Nous vous accompagnons selon votre situation (retraité, travailleur, étudiant).
@@ -957,7 +958,7 @@ export default function HomePage() {
                 whileInView={{ height: "100%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="w-full bg-gradient-to-b from-[#ff8c42] via-[#ffc857] to-[#ff8c42] shadow-[0_0_20px_rgba(255,140,66,0.6)]"
+                className="w-full bg-gradient-to-b from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] shadow-[0_0_20px_rgba(203,213,225,0.6)]"
               />
             </div>
 
@@ -969,54 +970,98 @@ export default function HomePage() {
                 { title: "Souscrire à une assurance santé", desc: "Couverture médicale complète exigée pour certains visas, avec accès aux hôpitaux internationaux.", icon: Stethoscope },
                 { title: "Trouver un logement adapté", desc: "Condo, maison ou villa — chaque ville offre des options variées à des prix très compétitifs.", icon: Home },
                 { title: "S&apos;enregistrer auprès des autorités", desc: "TM30, 90-day report et formalités d'immigration pour rester en règle tout au long de votre séjour.", icon: IdCard },
-              ].map((step, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                  className={`relative flex items-center md:justify-between group ${
-                    i % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-                  }`}
-                >
-                  {/* STEP CONTENT CARD */}
-                  <div className="ml-24 md:ml-0 md:w-[42%]">
-                    <div className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 rounded-xl bg-[#ff8c42]/10 text-[#ff8c42]">
-                          <step.icon className="w-6 h-6" />
-                        </div>
-                        <span className="text-[10px] font-black text-[#ffc857] uppercase tracking-[0.2em]">Étape 0{i + 1}</span>
-                      </div>
-                      <h3 className="text-xl md:text-2xl font-black text-white italic tracking-tight leading-tight mb-4">
-                        {step.title}
-                      </h3>
-                      <p className="text-white/40 text-sm leading-relaxed font-medium">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
+              ].map((step, i) => {
+                const isActive = activeSteps[i];
 
-                  {/* STEP NUMBER CIRCLE */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
-                    <div className="relative w-20 h-20">
-                      <div className="absolute inset-0 bg-[#ff8c42] rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
-                      <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#ff8c42] to-[#ffc857] p-[3px] shadow-[0_10px_30px_rgba(255,140,66,0.3)] transition-transform duration-500 group-hover:scale-110">
-                        <div className="w-full h-full rounded-full bg-[#022c31] flex items-center justify-center">
-                          <span className="text-3xl font-black text-white italic tracking-tighter">
-                            {i + 1}
-                          </span>
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    onViewportEnter={() => {
+                      setActiveSteps(prev => {
+                        const newSteps = [...prev];
+                        newSteps[i] = true;
+                        return newSteps;
+                      });
+                    }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                    className={`relative flex items-center md:justify-between group ${
+                      i % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+                    }`}
+                  >
+                    {/* STEP CONTENT CARD */}
+                    <div className="ml-24 md:ml-0 md:w-[42%]">
+                      <div className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ffc857]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
+                        <div className="flex items-center gap-4 mb-4">
+                          <motion.div
+                            animate={{
+                              backgroundColor: isActive ? "rgba(255, 200, 87, 0.2)" : "rgba(203, 213, 225, 0.1)",
+                              color: isActive ? "#ffc857" : "#cbd5e1"
+                            }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="p-3 rounded-xl"
+                          >
+                            <step.icon className="w-6 h-6" />
+                          </motion.div>
+                          <motion.span
+                            animate={{ color: isActive ? "#ffc857" : "#cbd5e1" }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-[10px] font-black uppercase tracking-[0.2em]"
+                          >
+                            Étape 0{i + 1}
+                          </motion.span>
                         </div>
+                        <h3 className="text-xl md:text-2xl font-black text-white italic tracking-tight leading-tight mb-4">
+                          {step.title}
+                        </h3>
+                        <p className="text-white/40 text-sm leading-relaxed font-medium">
+                          {step.desc}
+                        </p>
                       </div>
                     </div>
-                    {/* CONNECTOR LINE */}
-                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-[#ff8c42]/30 to-transparent w-20 ${
-                      i % 2 === 0 ? "right-20" : "left-20 rotate-180"
-                    }`} />
-                  </div>
-                </motion.div>
-              ))}
+
+                    {/* STEP NUMBER CIRCLE */}
+                    <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
+                      <div className="relative w-20 h-20">
+                        <motion.div
+                          animate={{ opacity: isActive ? 0.6 : 0 }}
+                          transition={{ duration: 0.8 }}
+                          className="absolute inset-0 bg-[#ffc857] rounded-full blur-xl"
+                        />
+                        <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#ffc857] to-[#ff8c42] p-[3px] shadow-[0_10px_30px_rgba(255,200,87,0.3)] transition-transform duration-500 group-hover:scale-110">
+                          <motion.div
+                            animate={{
+                              background: isActive
+                                ? "linear-gradient(135deg, #ffc857 0%, #ff8c42 100%)"
+                                : "#0f172a"
+                            }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            className="w-full h-full rounded-full flex items-center justify-center"
+                          >
+                            <span className="text-3xl font-black text-white italic tracking-tighter relative z-10">
+                              {i + 1}
+                            </span>
+                          </motion.div>
+                        </div>
+                      </div>
+                      {/* CONNECTOR LINE */}
+                      <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] overflow-hidden w-20 ${
+                        i % 2 === 0 ? "right-20" : "left-20 rotate-180"
+                      }`}>
+                        <motion.div
+                          initial={{ scaleX: 0 }}
+                          animate={{ scaleX: isActive ? 1 : 0 }}
+                          transition={{ duration: 0.8, delay: 0.4 }}
+                          style={{ transformOrigin: i % 2 === 0 ? "right" : "left" }}
+                          className="h-full bg-gradient-to-r from-[#ffc857] to-transparent"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -1048,15 +1093,15 @@ export default function HomePage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#022c31] via-[#022c31]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/60 to-transparent" />
                 <div className="relative z-10 p-8">
-                  <h3 className="text-3xl font-black italic mb-2 text-[#ffc857]">
+                  <h3 className="text-3xl font-black italic mb-2 text-[#cbd5e1]">
                     {city.name}
                   </h3>
                   <p className="text-white/70 font-medium leading-tight">
                     {city.desc}
                   </p>
-                  <div className="mt-4 flex items-center gap-2 text-[#ff8c42] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="mt-4 flex items-center gap-2 text-[#cbd5e1] font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                     Découvrir <ArrowUpRight size={16} />
                   </div>
                 </div>
@@ -1082,12 +1127,12 @@ export default function HomePage() {
             className="object-cover opacity-15"
           />
           <div className="absolute inset-0 opacity-80" style={{
-            background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`
+            background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
           <motion.div
             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -1106,11 +1151,11 @@ export default function HomePage() {
                 whileHover={{ scale: 1.02 }}
                 className="p-5 md:p-8 rounded-2xl md:rounded-3xl bg-white/5 border border-white/10 flex flex-col items-start gap-4 group cursor-pointer"
               >
-                <div className="text-[#ffc857]">{res.icon}</div>
+                <div className="text-[#cbd5e1]">{res.icon}</div>
                 <h3 className="text-xl font-bold leading-tight flex-1">
                   {res.title}
                 </h3>
-                <div className="flex items-center gap-2 text-white/40 group-hover:text-[#ff8c42] transition-colors font-bold text-sm uppercase tracking-widest">
+                <div className="flex items-center gap-2 text-white/40 group-hover:text-[#ffc857] transition-colors font-bold text-sm uppercase tracking-widest">
                   En savoir plus <ChevronRight size={16} />
                 </div>
               </motion.div>
@@ -1127,19 +1172,19 @@ export default function HomePage() {
           fill
           className="object-cover opacity-10"
         />
-        <div className="absolute inset-0 bg-[#022c31] opacity-80" />
+        <div className="absolute inset-0 bg-[#0f172a] opacity-80" />
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center p-8 md:p-12 lg:p-20 rounded-3xl md:rounded-[4rem] bg-gradient-to-br from-[#0d3b40] to-[#022c31] border border-white/10 relative overflow-hidden shadow-2xl">
-            <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#ff8c42] rounded-full blur-[100px] opacity-20" />
+          <div className="max-w-4xl mx-auto text-center p-8 md:p-12 lg:p-20 rounded-3xl md:rounded-[4rem] bg-gradient-to-br from-[#1e293b] to-[#0f172a] border border-white/10 relative overflow-hidden shadow-2xl">
+            <div className="absolute -top-24 -left-24 w-64 h-64 bg-[#cbd5e1] rounded-full blur-[100px] opacity-20" />
             <h2 className="text-2xl md:text-4xl lg:text-6xl font-black italic tracking-tighter mb-8">
               Vous envisagez de{" "}
-              <span className="text-[#ffc857]">vivre en Thaïlande ?</span>
+              <span className="text-[#cbd5e1]">vivre en Thaïlande ?</span>
             </h2>
             <p className="text-base md:text-xl text-white/70 mb-12 font-medium">
               Bénéficiez d&apos;un accompagnement personnalisé et d&apos;un audit
               gratuit de votre situation : retraite, visa, budget, logement, etc.
             </p>
-            <button className="px-8 md:px-12 py-4 md:py-6 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-base md:text-xl rounded-2xl transition-all shadow-xl hover:scale-105 active:scale-95">
+            <button className="px-8 md:px-12 py-4 md:py-6 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-base md:text-xl rounded-2xl transition-all shadow-[0_20px_50px_rgba(203,213,225,0.3)] hover:scale-105 active:scale-95">
               Je veux vivre en Thaïlande dès maintenant
             </button>
           </div>
@@ -1147,13 +1192,13 @@ export default function HomePage() {
       </section>
 
       {/* 10. FOOTER */}
-      <footer className="bg-[#022c31] pt-16 md:pt-32 pb-16 relative overflow-hidden">
+      <footer className="bg-[#0f172a] pt-16 md:pt-32 pb-16 relative overflow-hidden">
         {/* Animated Gradient Separator */}
         <div className="absolute top-0 left-0 w-full h-px bg-white/10 overflow-hidden">
           <motion.div
             animate={{ x: ["-100%", "100%"] }}
             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-            className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#ff8c42] to-transparent"
+            className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#cbd5e1] to-transparent"
           />
         </div>
 
@@ -1163,7 +1208,7 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <h2 className="text-3xl md:text-5xl lg:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
                 Partir Vivre <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   en Thaïlande
                 </span>
               </h2>
@@ -1173,7 +1218,7 @@ export default function HomePage() {
             </div>
 
             <div className="w-full max-w-md">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-4">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-4">
                 Recevez nos conseils expatriation
               </p>
               <div className="flex gap-2 p-1.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl">
@@ -1182,7 +1227,7 @@ export default function HomePage() {
                   placeholder="Votre email"
                   className="flex-1 bg-transparent px-4 py-2 text-white outline-none placeholder:text-white/20 text-sm"
                 />
-                <button className="px-6 py-2 bg-[#ff8c42] hover:bg-[#ff7a21] text-white rounded-xl font-bold text-sm transition-all shadow-[0_10px_20px_rgba(255,140,66,0.2)] flex items-center gap-2 group">
+                <button className="px-6 py-2 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white rounded-xl font-bold text-sm transition-all shadow-[0_10px_20px_rgba(203,213,225,0.2)] flex items-center gap-2 group">
                   S&apos;inscrire
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -1196,53 +1241,53 @@ export default function HomePage() {
               <div className="flex flex-col gap-4">
                 <a href="tel:+66614202619" className="group">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Téléphone</p>
-                  <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">+66 61 420 2619</p>
+                  <p className="text-white font-bold group-hover:text-[#ffc857] transition-colors">+66 61 420 2619</p>
                 </a>
                 <a href={`mailto:${contactEmail}`} className="group">
                   <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Email</p>
-                  <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">{contactEmail}</p>
+                  <p className="text-white font-bold group-hover:text-[#ffc857] transition-colors">{contactEmail}</p>
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-6">Navigation</h4>
+              <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-6">Navigation</h4>
               <ul className="space-y-3">
                 {["Accueil", "Nos services", "Blog", "Contact"].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-white/60 hover:text-white transition-colors text-sm font-medium">{link}</a>
+                    <a href="#" className="text-white/60 hover:text-[#ffc857] transition-colors text-sm font-medium">{link}</a>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="col-span-2">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-6">Nos Services</h4>
+              <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-6">Nos Services</h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
                 {[
                   "Visa Thaïlande", "Assurance Santé Expat", "Logement", "Permis de Conduire",
                   "Permis de Travail", "Créer une Entreprise", "École Internationale", "Retraite"
                 ].map((service) => (
                   <li key={service}>
-                    <a href="#" className="text-white/60 hover:text-white transition-colors text-sm font-medium">{service}</a>
+                    <a href="#" className="text-white/60 hover:text-[#ffc857] transition-colors text-sm font-medium">{service}</a>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="flex flex-col gap-4">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-2">Suivez-nous</h4>
+              <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-2">Suivez-nous</h4>
               <div className="flex flex-col gap-2">
-                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                  <MessageCircle className="w-4 h-4 text-[#ff8c42]" />
+                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                  <MessageCircle className="w-4 h-4 text-[#cbd5e1]" />
                   <span className="text-xs font-bold text-white uppercase tracking-widest">WhatsApp</span>
                 </a>
-                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                  <Facebook className="w-4 h-4 text-[#ff8c42]" />
+                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                  <Facebook className="w-4 h-4 text-[#cbd5e1]" />
                   <span className="text-xs font-bold text-white uppercase tracking-widest">Facebook</span>
                 </a>
-                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                  <Instagram className="w-4 h-4 text-[#ff8c42]" />
+                <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                  <Instagram className="w-4 h-4 text-[#cbd5e1]" />
                   <span className="text-xs font-bold text-white uppercase tracking-widest">Instagram</span>
                 </a>
               </div>
@@ -1256,7 +1301,7 @@ export default function HomePage() {
             </p>
             <div className="flex gap-4 md:gap-8">
               {["CGU", "Mentions légales", "Politique de confidentialité"].map((legal) => (
-                <a key={legal} href="#" className="text-white/30 hover:text-white text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
+                <a key={legal} href="#" className="text-white/30 hover:text-[#ffc857] text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
                   {legal}
                 </a>
               ))}
@@ -1289,7 +1334,7 @@ export default function HomePage() {
               }
               requestAnimationFrame(step);
             }}
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-[#ff8c42] hover:bg-[#ff7a21] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(255,140,66,0.4)] hover:shadow-[0_15px_40px_rgba(255,140,66,0.5)] hover:-translate-y-1 transition-all cursor-pointer"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white flex items-center justify-center shadow-[0_10px_30px_rgba(203,213,225,0.4)] hover:shadow-[0_15px_40px_rgba(255,200,87,0.5)] hover:-translate-y-1 transition-all cursor-pointer"
           >
             <ChevronDown className="w-5 h-5 rotate-180" />
           </motion.button>

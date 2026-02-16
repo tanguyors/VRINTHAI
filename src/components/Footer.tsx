@@ -32,13 +32,13 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#022c31] pt-16 md:pt-32 pb-16 relative overflow-hidden">
+    <footer className="bg-[#0f172a] pt-16 md:pt-32 pb-16 relative overflow-hidden">
       {/* Animated Gradient Separator */}
       <div className="absolute top-0 left-0 w-full h-px bg-white/10 overflow-hidden">
         <motion.div
           animate={{ x: ["-100%", "100%"] }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#ff8c42] to-transparent"
+          className="w-1/3 h-full bg-gradient-to-r from-transparent via-[#cbd5e1] to-transparent"
         />
       </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-5xl lg:text-7xl font-black italic text-white leading-[0.9] tracking-tighter mb-6">
               Partir Vivre <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ffc857] via-[#ff8c42] to-[#ffc857] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                 en Thaïlande
               </span>
             </h2>
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div className="w-full max-w-md">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-4">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-4">
               Recevez nos conseils expatriation
             </p>
             <div className="flex gap-2 p-1.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl">
@@ -67,7 +67,7 @@ export default function Footer() {
                 placeholder="Votre email"
                 className="flex-1 bg-transparent px-4 py-2 text-white outline-none placeholder:text-white/20 text-sm"
               />
-              <button className="px-6 py-2 bg-[#ff8c42] hover:bg-[#ff7a21] text-white rounded-xl font-bold text-sm transition-all shadow-[0_10px_20px_rgba(255,140,66,0.2)] flex items-center gap-2 group">
+              <button className="px-6 py-2 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white rounded-xl font-bold text-sm transition-all shadow-[0_10px_20px_rgba(203,213,225,0.2)] flex items-center gap-2 group">
                 S&apos;inscrire
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -81,50 +81,50 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <a href="tel:+66614202619" className="group">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Téléphone</p>
-                <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">+66 61 420 2619</p>
+                <p className="text-white font-bold group-hover:text-[#ffc857] transition-colors">+66 61 420 2619</p>
               </a>
               <a href={`mailto:${email}`} className="group">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-white/40 mb-1">Email</p>
-                <p className="text-white font-bold group-hover:text-[#ff8c42] transition-colors">{email}</p>
+                <p className="text-white font-bold group-hover:text-[#ffc857] transition-colors">{email}</p>
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-6">Navigation</h4>
+            <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-6">Navigation</h4>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm font-medium">{link.name}</Link>
+                  <Link href={link.href} className="text-white/60 hover:text-[#ffc857] transition-colors text-sm font-medium">{link.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="col-span-2">
-            <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-6">Nos Services</h4>
+            <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-6">Nos Services</h4>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3">
               {serviceLinks.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="text-white/60 hover:text-white transition-colors text-sm font-medium">{service.name}</Link>
+                  <Link href={service.href} className="text-white/60 hover:text-[#ffc857] transition-colors text-sm font-medium">{service.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="text-xs uppercase tracking-[0.3em] text-[#ffc857] font-bold mb-2">Suivez-nous</h4>
+            <h4 className="text-xs uppercase tracking-[0.3em] text-[#cbd5e1] font-bold mb-2">Suivez-nous</h4>
             <div className="flex flex-col gap-2">
-              <a href="https://wa.me/66614202619" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                <MessageCircle className="w-4 h-4 text-[#ff8c42]" />
+              <a href="https://wa.me/66614202619" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                <MessageCircle className="w-4 h-4 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300" />
                 <span className="text-xs font-bold text-white uppercase tracking-widest">WhatsApp</span>
               </a>
-              <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                <Facebook className="w-4 h-4 text-[#ff8c42]" />
+              <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                <Facebook className="w-4 h-4 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300" />
                 <span className="text-xs font-bold text-white uppercase tracking-widest">Facebook</span>
               </a>
-              <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ff8c42]/50 hover:bg-[#ff8c42]/10 transition-all group">
-                <Instagram className="w-4 h-4 text-[#ff8c42]" />
+              <a href="#" className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:border-[#ffc857]/50 hover:bg-[#ffc857]/10 transition-all group">
+                <Instagram className="w-4 h-4 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300" />
                 <span className="text-xs font-bold text-white uppercase tracking-widest">Instagram</span>
               </a>
             </div>
@@ -138,7 +138,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-4 md:gap-8">
             {["CGU", "Mentions légales", "Politique de confidentialité"].map((legal) => (
-              <a key={legal} href="#" className="text-white/30 hover:text-white text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
+              <a key={legal} href="#" className="text-white/30 hover:text-[#ffc857] text-[10px] uppercase tracking-[0.2em] font-medium transition-colors">
                 {legal}
               </a>
             ))}

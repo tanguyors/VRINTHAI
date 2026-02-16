@@ -234,13 +234,13 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
       <div
         className="absolute inset-0 opacity-80"
         style={{
-          background: `radial-gradient(circle at 10% 20%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 90% 80%, #064e3b 0%, transparent 40%)`,
+          background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
       <motion.div
         animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen"
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
       />
     </div>
   );
@@ -392,9 +392,9 @@ export default function CoutViePage() {
   return (
     <div
       ref={containerRef}
-      className="h-screen bg-[#022c31] text-white selection:bg-[#ff8c42] selection:text-white font-sans overflow-x-hidden overflow-y-auto"
+      className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto"
     >
-      <main className="bg-[#022c31] selection:bg-[#ff8c42] selection:text-white">
+      <main className="bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a]">
 
         {/* ═══════════════ SECTION 1 — HERO ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
@@ -410,7 +410,7 @@ export default function CoutViePage() {
             <div
               className="absolute inset-0 opacity-80"
               style={{
-                background: `radial-gradient(circle at 20% 30%, #0d3b40 0%, transparent 50%), radial-gradient(circle at 80% 10%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 50% 80%, #ffc857 0%, transparent 50%), radial-gradient(circle at 90% 90%, #064e3b 0%, transparent 50%)`,
+                background: `radial-gradient(circle at 20% 30%, #1e293b 0%, transparent 50%), radial-gradient(circle at 80% 10%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 90%, #cbd5e1 0%, transparent 50%)`,
               }}
             />
             <motion.div
@@ -420,7 +420,7 @@ export default function CoutViePage() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#ff8c42] rounded-full blur-[120px] mix-blend-screen opacity-30"
+              className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-30"
             />
           </div>
 
@@ -430,7 +430,7 @@ export default function CoutViePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#ffc857] text-sm font-bold tracking-widest uppercase"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-8 text-[#cbd5e1] text-sm font-bold tracking-widest uppercase"
               >
                 <Banknote className="w-4 h-4" />
                 <span>Budget &amp; Expatriation</span>
@@ -444,7 +444,7 @@ export default function CoutViePage() {
               >
                 Coût de la Vie
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   en Thaïlande
                 </span>
               </motion.h1>
@@ -475,13 +475,13 @@ export default function CoutViePage() {
               <span className="text-[10px] uppercase tracking-[0.3em] text-white/40 font-bold">
                 Profils détaillés
               </span>
-              <span className="text-2xl font-black text-white italic tracking-tighter">
+              <span className="text-2xl font-black text-[#ffc857] italic tracking-tighter">
                 4 profils
               </span>
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#022c31] z-10 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#0f172a] z-10 pointer-events-none" />
         </section>
 
         {/* ═══════════════ SECTION 2 — COMPARATIF PAR VILLE ═══════════════ */}
@@ -501,7 +501,7 @@ export default function CoutViePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Combien ça coûte{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   par ville ?
                 </span>
               </h2>
@@ -518,7 +518,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="group relative overflow-hidden rounded-[2.5rem] p-5 md:p-8 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between"
+                    className="group relative overflow-hidden rounded-[2.5rem] p-5 md:p-8 bg-gradient-to-br from-[#ffc857] to-[#ff8c42] shadow-[0_30px_60px_rgba(255,200,87,0.35)] hover:shadow-[0_35px_70px_rgba(255,200,87,0.5)] transition-all duration-300 flex flex-col justify-between"
                   >
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-6">
@@ -570,12 +570,12 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
+                    className="group relative bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] overflow-hidden"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-6">
-                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                           <Icon className="w-7 h-7 text-white" />
                         </div>
                       </div>
@@ -600,13 +600,13 @@ export default function CoutViePage() {
                       <div className="pt-4 border-t border-white/10">
                         <div className="flex items-center justify-between">
                           <span className="text-white/60 font-bold">Total estimé</span>
-                          <span className="text-xl font-black text-[#ffc857]">
+                          <span className="text-xl font-black text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300">
                             {city.total}
                           </span>
                         </div>
                       </div>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -633,7 +633,7 @@ export default function CoutViePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Les postes{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   de dépense
                 </span>
               </h2>
@@ -650,11 +650,11 @@ export default function CoutViePage() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ff8c42]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)]"
+                    className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-xl md:rounded-[2rem] p-5 md:p-8 hover:border-[#ffc857]/40 transition-all duration-500 group overflow-hidden hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)]"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff8c42] to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ff8c42]/20">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg shadow-[#ffc857]/20">
                         <Icon className="w-7 h-7 text-white" />
                       </div>
                       <h3 className="text-xl font-black text-white italic tracking-tight leading-tight mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
@@ -664,7 +664,7 @@ export default function CoutViePage() {
                         {post.description}
                       </p>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -691,7 +691,7 @@ export default function CoutViePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Quel budget{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   pour votre profil ?
                 </span>
               </h2>
@@ -708,7 +708,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
-                    className="group relative overflow-hidden rounded-[2.5rem] p-10 bg-gradient-to-br from-[#ff8c42] to-[#ffc857] shadow-[0_30px_60px_rgba(255,140,66,0.25)] flex flex-col justify-between"
+                    className="group relative overflow-hidden rounded-[2.5rem] p-10 bg-gradient-to-br from-[#ffc857] to-[#ff8c42] shadow-[0_30px_60px_rgba(255,200,87,0.35)] hover:shadow-[0_35px_70px_rgba(255,200,87,0.5)] transition-all duration-300 flex flex-col justify-between"
                   >
                     <div className="relative z-10">
                       <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 border border-white/30">
@@ -747,17 +747,17 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ff8c42]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,140,66,0.15)] overflow-hidden"
+                    className="group bg-white/5 backdrop-blur-md border border-white/10 rounded-[2.5rem] p-5 md:p-8 flex flex-col justify-between hover:border-[#ffc857]/40 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] overflow-hidden"
                   >
-                    <div className="absolute -inset-24 bg-[#ff8c42] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
+                    <div className="absolute -inset-24 bg-[#ffc857] opacity-0 group-hover:opacity-5 blur-[80px] transition-opacity duration-500 rounded-full" />
                     <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-xl bg-[#ffc857]/20 flex items-center justify-center mb-6 border border-[#ffc857]/30">
-                        <Icon className="w-6 h-6 text-[#ffc857]" />
+                      <div className="w-12 h-12 rounded-xl bg-[#cbd5e1]/20 flex items-center justify-center mb-6 border border-[#cbd5e1]/30">
+                        <Icon className="w-6 h-6 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300" />
                       </div>
                       <h3 className="text-2xl font-black text-white italic tracking-tighter mb-3 group-hover:text-[#ffc857] transition-colors duration-300">
                         {profile.title}
                       </h3>
-                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-[#ffc857] text-sm font-bold tracking-wider mb-4">
+                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-[#cbd5e1] text-sm font-bold tracking-wider mb-4">
                         {profile.budget}
                       </div>
                       <p className="text-white/70 font-medium mb-4">
@@ -769,13 +769,13 @@ export default function CoutViePage() {
                             key={p}
                             className="flex items-center gap-2 text-white/70 text-sm font-medium"
                           >
-                            <Check className="w-4 h-4 text-[#ffc857] flex-shrink-0" />
+                            <Check className="w-4 h-4 text-[#cbd5e1] flex-shrink-0" />
                             <span>{p}</span>
                           </li>
                         ))}
                       </ul>
                       <div className="mt-4 w-12 h-1 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-0 group-hover:w-full h-full bg-[#ff8c42] transition-all duration-500 ease-out" />
+                        <div className="w-0 group-hover:w-full h-full bg-[#ffc857] transition-all duration-500 ease-out" />
                       </div>
                     </div>
                   </motion.div>
@@ -802,7 +802,7 @@ export default function CoutViePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Optimiser{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   votre budget
                 </span>
               </h2>
@@ -815,7 +815,7 @@ export default function CoutViePage() {
                   whileInView={{ height: "100%" }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
-                  className="w-full bg-gradient-to-b from-[#ff8c42] via-[#ffc857] to-[#ff8c42] shadow-[0_0_20px_rgba(255,140,66,0.6)]"
+                  className="w-full bg-gradient-to-b from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] shadow-[0_0_20px_rgba(203,213,225,0.6)]"
                 />
               </div>
               <div className="md:hidden absolute left-10 top-0 bottom-0 w-1 bg-white/5 rounded-full overflow-hidden">
@@ -824,7 +824,7 @@ export default function CoutViePage() {
                   whileInView={{ height: "100%" }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
-                  className="w-full bg-gradient-to-b from-[#ff8c42] via-[#ffc857] to-[#ff8c42]"
+                  className="w-full bg-gradient-to-b from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1]"
                 />
               </div>
 
@@ -844,12 +844,12 @@ export default function CoutViePage() {
                       }`}
                     >
                       <div className="hidden md:block md:w-[42%]">
-                        <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
+                        <div className="p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] group-hover:-translate-y-1">
                           <div className="flex items-center gap-4 mb-4">
-                            <div className="p-3 rounded-xl bg-[#ff8c42]/10 text-[#ff8c42]">
+                            <div className="p-3 rounded-xl bg-[#cbd5e1]/10 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300">
                               <Icon className="w-6 h-6" />
                             </div>
-                            <span className="text-[10px] font-black text-[#ffc857] uppercase tracking-[0.2em]">
+                            <span className="text-[10px] font-black text-[#cbd5e1] uppercase tracking-[0.2em]">
                               Conseil 0{i + 1}
                             </span>
                           </div>
@@ -864,9 +864,9 @@ export default function CoutViePage() {
 
                       <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center">
                         <div className="relative w-20 h-20">
-                          <div className="absolute inset-0 bg-[#ff8c42] rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
-                          <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#ff8c42] to-[#ffc857] p-[3px] shadow-[0_10px_30px_rgba(255,140,66,0.3)] transition-transform duration-500 group-hover:scale-110">
-                            <div className="w-full h-full rounded-full bg-[#022c31] flex items-center justify-center">
+                          <div className="absolute inset-0 bg-[#ffc857] rounded-full blur-xl opacity-0 group-hover:opacity-40 transition-opacity duration-500" />
+                          <div className="relative w-20 h-20 rounded-full bg-gradient-to-br from-[#cbd5e1] to-[#cbd5e1] group-hover:from-[#ffc857] group-hover:to-[#ffc857] p-[3px] shadow-[0_10px_30px_rgba(203,213,225,0.3)] transition-transform duration-500 group-hover:scale-110">
+                            <div className="w-full h-full rounded-full bg-[#0f172a] flex items-center justify-center">
                               <span className="text-3xl font-black text-white italic tracking-tighter">
                                 {i + 1}
                               </span>
@@ -874,19 +874,19 @@ export default function CoutViePage() {
                           </div>
                         </div>
                         <div
-                          className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-[#ff8c42]/30 to-transparent w-20 ${
+                          className={`hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-gradient-to-r from-[#cbd5e1]/30 to-transparent w-20 ${
                             isLeft ? "right-20" : "left-20 rotate-180"
                           }`}
                         />
                       </div>
 
                       <div className="md:hidden flex items-start gap-6 ml-24">
-                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex-1 hover:border-[#ff8c42]/50 transition-all duration-500">
+                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 flex-1 hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] duration-500">
                           <div className="flex items-center gap-3 mb-3">
-                            <div className="p-3 rounded-xl bg-[#ff8c42]/10 text-[#ff8c42]">
+                            <div className="p-3 rounded-xl bg-[#cbd5e1]/10 text-[#cbd5e1] group-hover:text-[#ffc857] transition-colors duration-300">
                               <Icon className="w-5 h-5" />
                             </div>
-                            <span className="text-[10px] font-black text-[#ffc857] uppercase tracking-[0.2em]">
+                            <span className="text-[10px] font-black text-[#cbd5e1] uppercase tracking-[0.2em]">
                               Conseil 0{i + 1}
                             </span>
                           </div>
@@ -923,7 +923,7 @@ export default function CoutViePage() {
             >
               <h2 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic">
                 Questions{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   fréquentes
                 </span>
               </h2>
@@ -939,7 +939,7 @@ export default function CoutViePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-30px" }}
                     transition={{ duration: 0.5, delay: i * 0.05 }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#ff8c42]/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden hover:border-[#ffc857]/50 transition-all hover:shadow-[0_20px_50px_rgba(255,200,87,0.15)] duration-500 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                   >
                     <button
                       onClick={() => setOpenFaqIndex(isOpen ? null : i)}
@@ -985,7 +985,7 @@ export default function CoutViePage() {
             <div
               className="absolute inset-0"
               style={{
-                background: `radial-gradient(circle at 30% 20%, #ff8c42 0%, transparent 40%), radial-gradient(circle at 70% 80%, #ffc857 0%, transparent 40%), radial-gradient(circle at 50% 50%, #0d3b40 0%, transparent 60%), radial-gradient(circle at 10% 80%, #064e3b 0%, transparent 50%), radial-gradient(circle at 90% 20%, #022c31 0%, transparent 50%)`,
+                background: `radial-gradient(circle at 30% 20%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 70% 80%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 60%), radial-gradient(circle at 10% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 20%, #0f172a 0%, transparent 50%)`,
               }}
             />
             <motion.div
@@ -995,7 +995,7 @@ export default function CoutViePage() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#ff8c42] rounded-full blur-[150px] mix-blend-screen opacity-20"
+              className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-20"
             />
             <motion.div
               animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
@@ -1005,7 +1005,7 @@ export default function CoutViePage() {
                 ease: "easeInOut",
                 delay: 2,
               }}
-              className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#ffc857] rounded-full blur-[120px] mix-blend-screen opacity-20"
+              className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-20"
             />
           </div>
 
@@ -1019,7 +1019,7 @@ export default function CoutViePage() {
                 className="text-2xl md:text-4xl lg:text-6xl font-black text-white leading-[0.95] tracking-tighter italic mb-8"
               >
                 Besoin d&apos;un{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8c42] via-[#ffc857] to-[#ff8c42] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#cbd5e1] via-[#cbd5e1] to-[#cbd5e1] bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] pr-2">
                   budget personnalisé ?
                 </span>
               </motion.h2>
@@ -1042,7 +1042,7 @@ export default function CoutViePage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10"
               >
-                <button className="group relative px-10 py-5 bg-[#ff8c42] hover:bg-[#ff7a21] text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(255,140,66,0.3)] flex items-center gap-3">
+                <button className="group relative px-10 py-5 bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white font-black text-lg rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_20px_50px_rgba(203,213,225,0.3)] flex items-center gap-3">
                   <MessageCircle className="w-6 h-6" />
                   <span>Contactez-nous sur WhatsApp</span>
                 </button>
@@ -1075,7 +1075,7 @@ export default function CoutViePage() {
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#ff8c42] hover:bg-[#ff7a21] text-white shadow-[0_10px_30px_rgba(255,140,66,0.4)] flex items-center justify-center transition-colors duration-300 hover:scale-110 active:scale-95"
+            className="fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full bg-[#cbd5e1] text-[#0f172a] hover:bg-[#ffc857] hover:shadow-[0_25px_60px_rgba(255,200,87,0.4)]  hover:text-white shadow-[0_10px_30px_rgba(203,213,225,0.4)] flex items-center justify-center transition-colors duration-300 hover:scale-110 active:scale-95"
           >
             <ChevronUp className="w-6 h-6" />
           </motion.button>
