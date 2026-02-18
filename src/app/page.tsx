@@ -108,7 +108,7 @@ function CostOfLivingSection() {
   const maxExpense = breakdown.loyer;
 
   return (
-    <section className="relative py-16 md:py-32 bg-[#0f172a] overflow-hidden min-h-0 md:min-h-screen">
+    <section className="relative py-16 md:py-32 bg-[#0f172a] overflow-hidden min-h-0 md:min-h-screen md:snap-start">
       {/* Background Image + Decorative Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
@@ -328,7 +328,7 @@ function VisaAccordionSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
+    <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
           src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&q=60"
@@ -466,9 +466,9 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div ref={containerRef} className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto scroll-smooth" style={{ scrollSnapType: "y proximity" }}>
+    <div ref={containerRef} className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto scroll-smooth md:snap-y md:snap-proximity">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-clip bg-[#0f172a]">
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-clip bg-[#0f172a] md:snap-start">
         <div className="absolute inset-0 z-0">
           {/* Background Photo */}
           <Image
@@ -566,7 +566,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. FEATURES GRID */}
-      <section className="py-16 md:py-32 relative overflow-hidden bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a] min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-16 md:py-32 relative overflow-hidden bg-[#0f172a] selection:bg-[#cbd5e1] selection:text-[#0f172a] min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
         {/* Background Image + Decorative Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
@@ -652,7 +652,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. AVANTAGES & PROFILES BENTO GRID */}
-      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=800&q=60"
@@ -800,7 +800,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. DÉMARCHES TIMELINE */}
-      <section className="py-12 md:py-24 relative overflow-hidden bg-[#0f172a] min-h-0 md:min-h-screen">
+      <section className="py-12 md:py-24 relative overflow-hidden bg-[#0f172a] min-h-0 md:min-h-screen md:snap-start">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&q=60"
@@ -946,7 +946,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. OÙ VIVRE CITY CARDS */}
-      <section className="py-12 md:py-24 min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
         <div className="container mx-auto px-6">
           <SectionTitle subtitle="Chaque destination offre un cadre spécifique : urbain, balnéaire, montagnard ou insulaire. À chacun son ambiance !">
             Où vivre en Thaïlande ?
@@ -996,7 +996,7 @@ export default function HomePage() {
       <VisaAccordionSection />
 
       {/* 8. RESSOURCES UTILES */}
-      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
             src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=800&q=60"
@@ -1041,7 +1041,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. FINAL CTA */}
-      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
+      <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center md:snap-start">
         <Image
           src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=60"
           alt="Plage thaïlandaise au coucher du soleil"
