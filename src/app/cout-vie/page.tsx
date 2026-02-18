@@ -237,10 +237,8 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+      <div
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
       />
     </div>
   );
@@ -400,7 +398,7 @@ export default function CoutViePage() {
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+              src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
               alt="Marché thaïlandais"
               fill
               className="object-cover opacity-15"
@@ -487,7 +485,7 @@ export default function CoutViePage() {
         {/* ═══════════════ SECTION 2 — COMPARATIF PAR VILLE ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=60"
             alt="Skyline Bangkok"
           />
 
@@ -619,7 +617,7 @@ export default function CoutViePage() {
         {/* ═══════════════ SECTION 3 — POSTES DE DÉPENSE ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=60"
             alt="Vie quotidienne Thaïlande"
           />
 
@@ -677,7 +675,7 @@ export default function CoutViePage() {
         {/* ═══════════════ SECTION 4 — BUDGET PAR PROFIL ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=60"
             alt="Vie en Thaïlande"
           />
 
@@ -788,7 +786,7 @@ export default function CoutViePage() {
         {/* ═══════════════ SECTION 5 — CONSEILS OPTIMISATION ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=60"
             alt="Paysage Thaïlande"
           />
 
@@ -909,7 +907,7 @@ export default function CoutViePage() {
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
             alt="Thaïlande"
           />
 

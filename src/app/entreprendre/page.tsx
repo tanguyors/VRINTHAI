@@ -226,10 +226,8 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+      <div
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
       />
     </div>
   );
@@ -390,7 +388,7 @@ export default function EntreprenderPage() {
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=60"
               alt="Business Bangkok"
               fill
               className="object-cover opacity-15"
@@ -478,7 +476,7 @@ export default function EntreprenderPage() {
         {/* ═══════════════ SECTION 2 — STRUCTURES JURIDIQUES ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=60"
             alt="Bureau moderne"
           />
 
@@ -583,7 +581,7 @@ export default function EntreprenderPage() {
         {/* ═══════════════ SECTION 3 — ÉTAPES DE CRÉATION ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
             alt="Bangkok skyline"
           />
 
@@ -752,7 +750,7 @@ export default function EntreprenderPage() {
         {/* ═══════════════ SECTION 4 — VISA B & WORK PERMIT ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=800&q=60"
             alt="Documents administratifs"
           />
 
@@ -821,7 +819,7 @@ export default function EntreprenderPage() {
         {/* ═══════════════ SECTION 5 — PIÈGES À ÉVITER ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=60"
             alt="Bangkok"
           />
 
@@ -879,7 +877,7 @@ export default function EntreprenderPage() {
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
             alt="Thaïlande"
           />
 

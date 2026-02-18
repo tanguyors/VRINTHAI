@@ -219,10 +219,8 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+      <div
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
       />
     </div>
   );
@@ -383,7 +381,7 @@ export default function EcolesPage() {
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80"
+              src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=60"
               alt="École internationale Thaïlande"
               fill
               className="object-cover opacity-15"
@@ -471,7 +469,7 @@ export default function EcolesPage() {
         {/* ═══════════════ SECTION 2 — PROGRAMMES SCOLAIRES ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=60"
             alt="Campus scolaire"
           />
 
@@ -568,7 +566,7 @@ export default function EcolesPage() {
         {/* ═══════════════ SECTION 3 — COÛTS PAR VILLE ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=800&q=60"
             alt="Ville Thaïlande"
           />
 
@@ -686,7 +684,7 @@ export default function EcolesPage() {
         {/* ═══════════════ SECTION 4 — ADMISSION 5 ÉTAPES ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
             alt="Bangkok"
           />
 
@@ -855,7 +853,7 @@ export default function EcolesPage() {
         {/* ═══════════════ SECTION 5 — CRITÈRES DE CHOIX ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=60"
             alt="Thaïlande"
           />
 
@@ -913,7 +911,7 @@ export default function EcolesPage() {
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
             alt="Thaïlande"
           />
 

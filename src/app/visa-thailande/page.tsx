@@ -498,7 +498,7 @@ export default function VisaThailandePage() {
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=60"
             alt="Thaïlande paysage tropical"
             fill
             className="object-cover opacity-15"
@@ -584,7 +584,7 @@ export default function VisaThailandePage() {
       {/* ═══════════════ SECTION 2 — VISA TYPES GRID ═══════════════ */}
       <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
         <SectionBackground
-          src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=60"
           alt="Temple thaïlandais"
         />
 
@@ -672,7 +672,7 @@ export default function VisaThailandePage() {
       {/* ═══════════════ SECTION 3 — DETAILED CONDITIONS ═══════════════ */}
       <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
         <SectionBackground
-          src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=60"
           alt="Plage tropicale Thaïlande"
         />
 
@@ -782,7 +782,7 @@ export default function VisaThailandePage() {
       {/* ═══════════════ SECTION 4 — 6-STEP TIMELINE ═══════════════ */}
       <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
         <SectionBackground
-          src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
           alt="Coucher de soleil Bangkok"
         />
 
@@ -957,7 +957,7 @@ export default function VisaThailandePage() {
       {/* ═══════════════ SECTION 5 — WHERE TO APPLY ═══════════════ */}
       <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
         <SectionBackground
-          src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=60"
           alt="Bangkok Thaïlande"
         />
 
@@ -1018,7 +1018,7 @@ export default function VisaThailandePage() {
       {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
       <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
         <SectionBackground
-          src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
           alt="Voyage Thaïlande"
         />
 
@@ -1098,19 +1098,10 @@ export default function VisaThailandePage() {
               background: `radial-gradient(circle at 30% 20%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 70% 80%, #cbd5e1 0%, transparent 40%), radial-gradient(circle at 50% 50%, #1e293b 0%, transparent 60%), radial-gradient(circle at 10% 80%, #cbd5e1 0%, transparent 50%), radial-gradient(circle at 90% 20%, #0f172a 0%, transparent 50%)`,
             }}
           />
-          <motion.div
-            animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          <div
             className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-20"
           />
-          <motion.div
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
-            transition={{
-              duration: 12,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2,
-            }}
+          <div
             className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#cbd5e1] rounded-full blur-[120px] mix-blend-screen opacity-20"
           />
         </div>

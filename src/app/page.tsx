@@ -112,7 +112,7 @@ function CostOfLivingSection() {
       {/* Background Image + Decorative Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
           alt="Street food en Thaïlande"
           fill
           className="object-cover opacity-15"
@@ -120,10 +120,8 @@ function CostOfLivingSection() {
         <div className="absolute inset-0 opacity-80" style={{
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
         }} />
-        <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+        <div
+          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
         />
       </div>
 
@@ -333,7 +331,7 @@ function VisaAccordionSection() {
     <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=800&q=60"
           alt="Aéroport international"
           fill
           className="object-cover opacity-15"
@@ -341,10 +339,8 @@ function VisaAccordionSection() {
         <div className="absolute inset-0 opacity-80" style={{
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
         }} />
-        <motion.div
-          animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+        <div
+          className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
         />
       </div>
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
@@ -457,7 +453,6 @@ function VisaAccordionSection() {
 
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isScrollingRef = useRef(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeSteps, setActiveSteps] = useState<boolean[]>([false, false, false, false, false, false]);
 
@@ -470,125 +465,14 @@ export default function HomePage() {
     return () => container.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    const getSections = () =>
-      Array.from(container.querySelectorAll<HTMLElement>(":scope > section, :scope > footer"));
-
-    function easeOutCubic(t: number) {
-      return 1 - Math.pow(1 - t, 3);
-    }
-
-    function animateScroll(from: number, to: number) {
-      isScrollingRef.current = true;
-      const distance = to - from;
-      const duration = 600;
-      const startTime = performance.now();
-
-      function step(time: number) {
-        if (!container) return;
-        const elapsed = time - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        container.scrollTop = from + distance * easeOutCubic(progress);
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          setTimeout(() => {
-            isScrollingRef.current = false;
-          }, 100);
-        }
-      }
-
-      requestAnimationFrame(step);
-    }
-
-    const handleWheel = (e: WheelEvent) => {
-      if (isScrollingRef.current) {
-        e.preventDefault();
-        return;
-      }
-
-      const sections = getSections();
-      const scrollTop = container.scrollTop;
-      const vh = container.clientHeight;
-
-      // Find current section: the one whose top is closest above scroll position
-      let currentIdx = 0;
-      for (let i = 0; i < sections.length; i++) {
-        if (sections[i].offsetTop <= scrollTop + 10) {
-          currentIdx = i;
-        }
-      }
-
-      const section = sections[currentIdx];
-      const sectionTop = section.offsetTop;
-      const sectionBottom = sectionTop + section.offsetHeight;
-
-      // Can we see the bottom of this section?
-      const canSeeBottom = scrollTop + vh >= sectionBottom - 20;
-      // Are we at the top of this section?
-      const atSectionTop = scrollTop <= sectionTop + 20;
-
-      const scrollingDown = e.deltaY > 0;
-      const scrollingUp = e.deltaY < 0;
-
-      if (scrollingDown && !canSeeBottom) {
-        // Haven't reached bottom yet → scroll naturally inside
-        return;
-      }
-
-      if (scrollingUp && !atSectionTop) {
-        // Haven't reached top yet → scroll naturally inside
-        return;
-      }
-
-      // We're at an edge → snap to next/prev section
-      e.preventDefault();
-
-      const nextIdx = scrollingDown
-        ? Math.min(currentIdx + 1, sections.length - 1)
-        : Math.max(currentIdx - 1, 0);
-
-      if (nextIdx !== currentIdx) {
-        animateScroll(scrollTop, sections[nextIdx].offsetTop);
-      }
-    };
-
-    // Touch support
-    let touchStartY = 0;
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartY = e.touches[0].clientY;
-    };
-    const handleTouchEnd = (e: TouchEvent) => {
-      const deltaY = touchStartY - e.changedTouches[0].clientY;
-      if (Math.abs(deltaY) > 50) {
-        handleWheel({
-          preventDefault: () => {},
-          deltaY,
-        } as unknown as WheelEvent);
-      }
-    };
-
-    container.addEventListener("wheel", handleWheel, { passive: false });
-    container.addEventListener("touchstart", handleTouchStart, { passive: true });
-    container.addEventListener("touchend", handleTouchEnd, { passive: true });
-    return () => {
-      container.removeEventListener("wheel", handleWheel);
-      container.removeEventListener("touchstart", handleTouchStart);
-      container.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
-
   return (
-    <div ref={containerRef} className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto">
+    <div ref={containerRef} className="h-screen bg-[#0f172a] text-white selection:bg-[#cbd5e1] selection:text-[#0f172a] font-sans overflow-x-hidden overflow-y-auto scroll-smooth" style={{ scrollSnapType: "y proximity" }}>
       {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-screen flex items-center justify-center overflow-x-clip bg-[#0f172a]">
         <div className="absolute inset-0 z-0">
           {/* Background Photo */}
           <Image
-            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=800&q=60"
             alt="Temples dorés de Thaïlande"
             fill
             className="object-cover opacity-20"
@@ -686,7 +570,7 @@ export default function HomePage() {
         {/* Background Image + Decorative Elements */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
-            src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=800&q=60"
             alt="Rizières tropicales de Thaïlande"
             fill
             className="object-cover opacity-15"
@@ -694,10 +578,8 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-80" style={{
             background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+          <div
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
           />
         </div>
 
@@ -773,7 +655,7 @@ export default function HomePage() {
       <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <Image
-            src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=800&q=60"
             alt="Marché flottant en Thaïlande"
             fill
             className="object-cover opacity-15"
@@ -781,10 +663,8 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-80" style={{
             background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+          <div
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -923,7 +803,7 @@ export default function HomePage() {
       <section className="py-12 md:py-24 relative overflow-hidden bg-[#0f172a] min-h-0 md:min-h-screen">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
-            src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&q=60"
             alt="Temple doré de Bangkok"
             fill
             className="object-cover opacity-15"
@@ -931,10 +811,8 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-80" style={{
             background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+          <div
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -1121,7 +999,7 @@ export default function HomePage() {
       <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <Image
-            src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?w=800&q=60"
             alt="Plage tropicale de Thaïlande"
             fill
             className="object-cover opacity-15"
@@ -1129,10 +1007,8 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-80" style={{
             background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`
           }} />
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+          <div
+            className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
           />
         </div>
         <div className="container mx-auto px-6 relative z-10">
@@ -1167,7 +1043,7 @@ export default function HomePage() {
       {/* 9. FINAL CTA */}
       <section className="py-12 md:py-24 relative overflow-hidden min-h-0 md:min-h-screen flex flex-col justify-center">
         <Image
-          src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=1920&q=80"
+          src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=60"
           alt="Plage thaïlandaise au coucher du soleil"
           fill
           className="object-cover opacity-10"

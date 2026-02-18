@@ -195,10 +195,8 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+      <div
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
       />
     </div>
   );
@@ -359,7 +357,7 @@ export default function PermisConduirePage() {
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1920&q=80"
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=60"
               alt="Route en Thaïlande"
               fill
               className="object-cover opacity-15"
@@ -447,7 +445,7 @@ export default function PermisConduirePage() {
         {/* ═══════════════ SECTION 2 — QUEL PERMIS ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=60"
             alt="Route thaïlandaise"
           />
 
@@ -544,7 +542,7 @@ export default function PermisConduirePage() {
         {/* ═══════════════ SECTION 3 — DOCUMENTS ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1562601579-599dec564e06?w=800&q=60"
             alt="Documents administratifs"
           />
 
@@ -602,7 +600,7 @@ export default function PermisConduirePage() {
         {/* ═══════════════ SECTION 4 — PROCÉDURE 5 ÉTAPES ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
             alt="Bangkok"
           />
 
@@ -771,7 +769,7 @@ export default function PermisConduirePage() {
         {/* ═══════════════ SECTION 5 — VALIDITÉ ET RENOUVELLEMENT ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=60"
             alt="Bangkok"
           />
 
@@ -829,7 +827,7 @@ export default function PermisConduirePage() {
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
             alt="Thaïlande"
           />
 

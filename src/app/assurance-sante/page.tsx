@@ -205,10 +205,8 @@ function SectionBackground({ src, alt }: { src: string; alt: string }) {
           background: `radial-gradient(circle at 10% 20%, #1e293b 0%, transparent 50%), radial-gradient(circle at 90% 80%, #cbd5e1 0%, transparent 40%)`,
         }}
       />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen"
+      <div
+        className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#cbd5e1] rounded-full blur-[150px] mix-blend-screen opacity-15"
       />
     </div>
   );
@@ -369,7 +367,7 @@ export default function AssuranceSantePage() {
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80"
+              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=60"
               alt="Hôpital moderne en Thaïlande"
               fill
               className="object-cover opacity-15"
@@ -456,7 +454,7 @@ export default function AssuranceSantePage() {
         {/* ═══════════════ SECTION 2 — POURQUOI INDISPENSABLE ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=60"
             alt="Soins médicaux"
           />
 
@@ -514,7 +512,7 @@ export default function AssuranceSantePage() {
         {/* ═══════════════ SECTION 3 — GARANTIES À VÉRIFIER ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=60"
             alt="Médecine Thaïlande"
           />
 
@@ -572,7 +570,7 @@ export default function AssuranceSantePage() {
         {/* ═══════════════ SECTION 4 — OFFRES PAR PROFIL ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=60"
             alt="Famille en Thaïlande"
           />
 
@@ -679,7 +677,7 @@ export default function AssuranceSantePage() {
         {/* ═══════════════ SECTION 5 — PROCÉDURE 4 ÉTAPES ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=60"
             alt="Coucher de soleil Bangkok"
           />
 
@@ -848,7 +846,7 @@ export default function AssuranceSantePage() {
         {/* ═══════════════ SECTION 6 — FAQ ═══════════════ */}
         <section className="relative w-full min-h-0 md:min-h-screen flex items-center overflow-hidden py-12 md:py-24">
           <SectionBackground
-            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=1920&q=80"
+            src="https://images.unsplash.com/photo-1494949360228-4e9f966b5c96?w=800&q=60"
             alt="Voyage Thaïlande"
           />
 
